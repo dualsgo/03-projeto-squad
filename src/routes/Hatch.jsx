@@ -38,15 +38,13 @@ const Hatch = () => {
       <br />
       <h1 className="casa">Veículos HATCH</h1>
       {hatch.length === 0 ? (
-        <p>Carregando...</p>
+        <p className="aguarde">Carregando o conteúdo. Por favor, aguarde...</p>
       ) : (
         hatch.map((hatch) => (
           <div className="post" key={hatch.id}>
             <div className="container">
-              <h4 >{hatch.marca}</h4>
-              <h4 >{hatch.modelo}</h4>
-              <h4 >{hatch.ano}</h4>
-              <h4 >{hatch.cor}</h4>
+              <h4 ><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
+              <h4 ><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4><br />
               <Link className="btn-btn" to={`/NewPost`}>
                 Inserir Post
               </Link>

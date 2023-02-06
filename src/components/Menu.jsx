@@ -14,7 +14,7 @@ function NavScrollExample() {
       <Container className="Menu" fluid>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form className="d-flex">
+{/*           <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Procurar"
@@ -22,7 +22,7 @@ function NavScrollExample() {
               aria-label="Search"
             />
             <Button className="B-1" variant="outline-danger">Procurar</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

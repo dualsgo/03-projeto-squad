@@ -39,17 +39,15 @@ const Suv = () => {
 
       <h1 className="casa">Veículos SUV</h1>
       {suvs.length === 0 ? (
-        <p>Carregando conteúdo. Por favor, aguarde...</p>
+        <p className = "aguarde">Carregando conteúdo. Por favor, aguarde...</p>
       ) : (
         suvs.map((suvs) => (
 
           <div className="post" key={suvs.id}>
             <div className="container">
 
-              <h4 >{suvs.marca}</h4>
-              <h4 >{suvs.modelo}</h4>
-              <h4 >{suvs.ano}</h4>
-              <h4 >{suvs.cor}</h4>
+              <h4 ><span>Veículo:</span> {suvs.marca} / {suvs.modelo}</h4>
+              <h4 ><span>Infos adicionais: </span>{suvs.ano} / {suvs.cor}</h4><br />
 
               <Link className="btn-btn" to={`/NewPost`}>
                 Inserir veículo

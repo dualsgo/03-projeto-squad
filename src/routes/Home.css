@@ -1,8 +1,8 @@
-
-.casa{
+.casa {
   border-top: 5px double #c90f0d;
   margin-top: 25px;
 }
+
 .home h1 {
   text-transform: uppercase;
   text-align: center;
@@ -10,22 +10,25 @@
 }
 
 .post {
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 5px double #c90f0d;
+  border-bottom: 5px double #000;
 }
-.container img{
-  width:650px ;
-  height:450px;
+
+.container img {
+  width: 650px;
+  height: 450px;
   float: left;
   margin-right: 20px;
 }
+
 .post h2,
-.post p, h4 {
+.post p,
+h4 {
   margin-bottom: 1rem;
-  
+
 }
 
 .post h2::first-letter {
@@ -34,8 +37,8 @@
 
 .btn-btn {
   background-color: rgb(240, 240, 240);
-  color: #101f30;
-  border: 2px solid #c90f0d;
+  color: #000;
+  border: 2px solid #000;
   opacity: 15;
   padding: 0.5rem 1rem;
   border-radius: 15px;
@@ -43,24 +46,9 @@
   text-align: center;
   cursor: pointer;
   transition: 0.8s;
-  
+
 }
 
-.btn-btn:hover {
+span {
   color: #c90f0d;
-  background-color: #101f30;
 }
-.animate__animated{
-  
-  animation: lightSpeedInRight; 
-  animation-duration: 5s; 
-  
-}
-h4:hover{
-  animation:alternate;
-  cursor: pointer;
-  animation-duration: 5s;
-  color: #000;
-}
-
-

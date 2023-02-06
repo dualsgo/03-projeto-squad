@@ -1,16 +1,17 @@
 .B-1:hover {
-    background:#c90f0d;
-  padding: 10px 15px;
-  transition: .3s;
-  border-radius: 16px;
-  font-weight: bold;
-  opacity: 2px;
-  justify-content: center;
-  margin-left: 13px;
-  margin-bottom: 12px;
- }
- .Menu{
-    margin-bottom: 15px;
-    justify-content: center;
-    padding-right: 8px;
- }
+   background: #000;
+   padding: 10px 15px;
+   transition: .3s;
+   border-radius: 16px;
+   font-weight: bold;
+   opacity: 2px;
+   justify-content: center;
+   margin-left: 13px;
+   margin-bottom: 12px;
+}
+
+.Menu {
+   margin-bottom: 15px;
+   justify-content: center;
+   padding-right: 8px;
+}

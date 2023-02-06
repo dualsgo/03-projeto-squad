@@ -35,10 +35,8 @@ const Post = () => {
         <p>Carregando conteúdo. Por favor, aguarde...</p>
       ) : (
         <div className="post">
-            <h2>{post.marca}</h2>
-            <h2>{post.modelo}</h2>
-            <h2>{post.ano}</h2>
-            <h2>{post.cor}</h2>
+            <h2>Veículo: {post.marca} - {post.modelo}</h2>
+            <h2>{post.ano} - {post.cor}</h2>
         </div>
       )}
     </div>

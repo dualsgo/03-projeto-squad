@@ -39,18 +39,14 @@ const Home = () => {
 
       <h1 className="casa">Veículos SEDAN</h1>
       {sedans.length === 0 ? (
-        <p>Carregando conteúdo. Por favor, aguarde...</p>
+        <p className="aguarde">Carregando conteúdo. Por favor, aguarde...</p>
       ) : (
         sedans.map((sedans) => (
 
           <div className="post" key={sedans.id}>
             <div className="container">
-
-              <h4 >{sedans.marca}</h4>
-              <h4 >{sedans.modelo}</h4>
-              <h4 >{sedans.ano}</h4>
-              <h4 >{sedans.cor}</h4>
-
+              <h4 ><span>Veículo:</span> {sedans.marca} / {sedans.modelo}</h4>
+              <h4 ><span>Infos adicionais: </span>{sedans.ano} / {sedans.cor}</h4><br />
               <Link className="btn-btn" to={`/NewPost`}>
                 Inserir veículo
               </Link>
