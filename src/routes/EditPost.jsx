@@ -1,15 +1,15 @@
 import blogFetch from "../axios/config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./NewPost.css"
+import "./EditPost.css"
 
-const NewPost = () => {
+const EditPost = () => {
 
   const navigate = useNavigate()
-
   const [carro, setCarro] = useState()
   const [placa, setPlaca] = useState()
   const [telefone, setTelefone] = useState()
+
 
 
   const createPost = async (e) => {
@@ -21,7 +21,7 @@ const NewPost = () => {
       telefone
     };
 
-    await blogFetch.post("/garagem", {
+    await blogFetch.post(`/garagem/${id}`, {
       carro,
       placa,
       telefone
@@ -34,7 +34,6 @@ const NewPost = () => {
     <div className='new-post'>
       <h2>Editar Post:</h2>
       <form onSubmit={(e) => createPost(e)}>
-
         <div className='form-control'>
           <label htmlFor="carro">Carro: </label>
           <input type="text" name='carro' id='carro' placeholder='Digite o modelo do carro' onChange={(e) => setCarro(e.target.value)} />
@@ -49,11 +48,11 @@ const NewPost = () => {
           <input type="number" name='telefone' id='telefone' placeholder='Digite o telefone' onChange={(e) => setTelefone(e.target.value)} />
         </div>
 
-        <input type="submit" value="Criar post" className='btn' />
+        <input type="submit" value="Editar" className='btn' />
 
       </form>
     </div>
   )
 }
 
-export default NewPost
+export default EditPost

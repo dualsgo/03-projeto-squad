@@ -36,12 +36,7 @@ const Home = () => {
 
             <p>{post.placa}</p>
             <p>{post.telefone}</p>
-
-<div className="redirect">
-              <Link to={`/garagem/${post.id}`} className="btn">Editar</Link>
-              <Link to={`/garagem/${post.id}`} className="btn">Excluir</Link>
-</div>
-
+            
           </div>
         ))
       )}
