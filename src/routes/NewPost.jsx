@@ -1,59 +1,81 @@
-import blogFetch from "../axios/config";
+import bancodadosFetch from "../axios/config";
+
 import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-import "./NewPost.css"
+
+import Form from 'react-bootstrap/Form';
+
+import "./NewPost.css";
 
 const NewPost = () => {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  const [carro, setCarro] = useState()
-  const [placa, setPlaca] = useState()
-  const [telefone, setTelefone] = useState()
+  const [marca, setMarca] = useState();
+  const [modelo, setModelo] = useState();
+  const [ano, setAno] = useState();
+  const [cor, setCor] = useState();
 
 
   const createPost = async (e) => {
     e.preventDefault();
 
-    const post = {
-      carro,
-      placa,
-      telefone
-    };
+    const post = { marca, modelo, ano, cor };
 
-    await blogFetch.post("/garagem", {
-      carro,
-      placa,
-      telefone
-    });
+    await bancodadosFetch.post("/sedan", {
+      marca, modelo, ano, cor
+    })
 
     navigate("/");
-  }
+    await bancodadosFetch.post("/hatch", {
+      marca, modelo, ano, cor
+    })
+
+    navigate("/");
+    await bancodadosFetch.post("/suv", {
+      marca, modelo, ano, cor
+    })
+
+    navigate("/");
+  };
 
   return (
-    <div className='new-post'>
-      <h2>Inserir novo Post:</h2>
+    <div className="new-post">
+      <h2>Inserir novo veículo:</h2>
       <form onSubmit={(e) => createPost(e)}>
-
-        <div className='form-control'>
-          <label htmlFor="carro">Carro: </label>
-          <input type="text" name='carro' id='carro' placeholder='Digite o modelo do carro' onChange={(e) => setCarro(e.target.value)} />
-        </div>
-
         <div className="form-control">
-          <label htmlFor="placa">Placa: </label>
-          <input type="text" name='placa' id='placa' placeholder='Digite a placa' onChange={(e) => setPlaca(e.target.value)} />
-        </div>
-        <div className="form-control">
-          <label htmlFor="placa">Telefone: </label>
-          <input type="number" name='telefone' id='telefone' placeholder='Digite o telefone' onChange={(e) => setTelefone(e.target.value)} />
-        </div>
+          <label htmlFor="title">Marca do veículo</label>
+          <input
+            placeholder="Digite a marca"
+            onChange={(e) => setMarca(e.target.value)}
+          />
 
-        <input type="submit" value="Criar post" className='btn' />
+          <label htmlFor="title">Modelo do veículo:</label>
+          <textarea
 
+            placeholder="Digite o modelo."
+            onChange={(e) => setModelo(e.target.value)}
+          ></textarea>
+
+          <label htmlFor="title">Ano de fabricação:</label>
+          <textarea
+            placeholder="Digite o ano."
+            onChange={(e) => setAno(e.target.value)}
+          ></textarea>
+
+          <label htmlFor="title">Cor do veículo:</label>
+          <textarea
+
+            placeholder="Digite a cor"
+            onChange={(e) => setCor(e.target.value)}
+          ></textarea>
+
+        </div>
+        <input type="submit" value="Inserir Post" className="btn-btn" />
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default NewPost
+export default NewPost;
+

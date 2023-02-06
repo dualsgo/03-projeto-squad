@@ -1,15 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
-//páginas
-import Home from './routes/Home'
-import NewPost from './routes/NewPost'
-import EditPost from './routes/EditPost'
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+
+import App from "./App";
+
+import Home from "./routes/Home";
+import Post from "./routes/Post";
+import Admin from "./routes/Admin";
+import EditPost from "./routes/EditPost";
+import Suvs from "./routes/Suvs";
+import Hatch from "./routes/Hatch";
+import NewPost from "./routes/NewPost";
 
 
-import './index.css'
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -17,21 +22,40 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
-        path: "/new",
-        element: <NewPost />
+        path: "/posts/:id",
+        element: <Post />,
       },
       {
-        path: "/edit",
-        element: <EditPost />
-      }
-    ]
-  }])
+        path: "/admin",
+        element: <Admin />,
+      },
+      ,
+      {
+        path: "/posts/edit/:id",
+        element: <EditPost />,
+      },
+      {
+        path: "/Suv",
+        element: <Suvs />,
+      },
+      {
+        path: "/Hatch",
+        element: <Hatch />,
+      },
+      {
+        path: "/NewPost",
+        element: <NewPost />,
+      },
+    ],
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
+

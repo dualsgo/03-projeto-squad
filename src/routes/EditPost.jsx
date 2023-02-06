@@ -1,58 +1,105 @@
-import blogFetch from "../axios/config";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./EditPost.css"
+import bancodadosFetch from "../axios/config";
 
-const EditPost = () => {
+import { useState, useEffect } from "react";
 
-  const navigate = useNavigate()
-  const [carro, setCarro] = useState()
-  const [placa, setPlaca] = useState()
-  const [telefone, setTelefone] = useState()
+import { useParams, useNavigate } from "react-router-dom";
 
+import "./NewPost.css";
 
+const NewPost = () => {
+  const navigate = useNavigate();
 
-  const createPost = async (e) => {
+  const [marca, setTipo] = useState();
+  const [quarto, setQuarto] = useState();
+  const [suite, setSuite] = useState();
+  const [tamanho, setTamanho] = useState();
+  const [imagem, setImagem] = useState();
+
+  const { id } = useParams();
+
+  const getPost = async () => {
+    try {
+      const response = await bancodadosFetch.get(`/Casas/${id}`);
+
+      const data = response.data;
+
+      console.log(data);
+
+      setTipo(data.marca);
+      setQuarto(data.quarto);
+      setSuite(data.suite)
+      setTamanho(data.tamanho)
+      setImagem(data.imagem)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const editPost = async (e) => {
     e.preventDefault();
 
-    const post = {
-      carro,
-      placa,
-      telefone
-    };
+    const post = { marca, quarto, suite, tamanho, imagem, };
 
-    await blogFetch.post(`/garagem/${id}`, {
-      carro,
-      placa,
-      telefone
+    await bancodadosFetch.put(`/Casas/${id}`, {
+      id: post,
     });
 
     navigate("/");
-  }
+  };
+
+  useEffect(() => {
+    getPost();
+  }, []);
 
   return (
-    <div className='new-post'>
-      <h2>Editar Post:</h2>
-      <form onSubmit={(e) => createPost(e)}>
-        <div className='form-control'>
-          <label htmlFor="carro">Carro: </label>
-          <input type="text" name='carro' id='carro' placeholder='Digite o modelo do carro' onChange={(e) => setCarro(e.target.value)} />
-        </div>
-
+    <div className="new-post">
+      <h2>Editando: {marca}</h2>
+      <form onSubmit={(e) => editPost(e)}>
         <div className="form-control">
-          <label htmlFor="placa">Placa: </label>
-          <input type="text" name='placa' id='placa' placeholder='Digite a placa' onChange={(e) => setPlaca(e.target.value)} />
-        </div>
-        <div className="form-control">
-          <label htmlFor="placa">Telefone: </label>
-          <input type="number" name='telefone' id='telefone' placeholder='Digite o telefone' onChange={(e) => setTelefone(e.target.value)} />
-        </div>
+          <label htmlFor="title">Tipo de Residência:</label>
+          <input
+            placeholder="Digite o marca de Residência..."
+            onChange={(e) => setTipo(e.target.value)}
+            value={marca || ""}
+          />
 
-        <input type="submit" value="Editar" className='btn' />
 
+          <label htmlFor="title">Quantidade de Quartos:</label>
+          <textarea
+
+            placeholder="Digite a quantidade de quartos..."
+            onChange={(e) => setQuarto(e.target.value)}
+            value={quarto || ""}
+          ></textarea>
+
+          <label htmlFor="title">Suites:</label>
+          <textarea
+
+            placeholder="A residência possui suíte?..."
+            onChange={(e) => setSuite(e.target.value)}
+            value={suite || ""}
+          ></textarea>
+
+          <label htmlFor="title">Tamanho por M²:</label>
+          <textarea
+
+            placeholder="Diga quantos M² a residência tem..."
+            onChange={(e) => setTamanho(e.target.value)}
+            value={tamanho || ""}
+          ></textarea>
+
+          <label htmlFor="title">Imagem:</label>
+          <textarea
+            placeholder="Faça o upload da imagem..."
+            onChange={(e) => setImagem(e.target.value)}
+            value={imagem || ""}
+          ></textarea>
+        </div>
+        <input type="submit" value="Editar Post" className="btn" />
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default EditPost
+export default NewPost;
+

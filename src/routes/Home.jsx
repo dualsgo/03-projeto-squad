@@ -1,47 +1,66 @@
-import blogFetch from "../axios/config";
+import bancodadosFetch from "../axios/config";
+
 import { useState, useEffect } from "react";
-import NewPost from "./NewPost";
+
 import { Link } from "react-router-dom";
 
-import './Home.css'
+import "./Home.css";
+
+import Menu from "../components/Menu"
+
+
+import Button from 'react-bootstrap/Button';
+
 
 const Home = () => {
-  const [posts, setPosts] = useState([])
-  const getPosts = async () => {
+  const [sedans, setSedans] = useState([]);
 
+  const getSedan = async () => {
     try {
-      const response = await blogFetch.get("/garagem")
-      const data = response.data
-      setPosts(data)
+      const response = await bancodadosFetch.get("/sedan");
 
+      const data = response.data;
+
+      setSedans(data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-
   };
+
   useEffect(() => {
-    getPosts();
+    getSedan();
   }, []);
 
   return (
     <div className="home">
-      <h1>Registro de veículos</h1>
+      <Menu />
+      <br />
+      <br />
 
-      {posts.length === 0 ? <p>Carregando...</p> : (
-        posts.map((post) => (
+      <h1 className="casa">Veículos SEDAN</h1>
+      {sedans.length === 0 ? (
+        <p>Carregando conteúdo. Por favor, aguarde...</p>
+      ) : (
+        sedans.map((sedans) => (
 
-          <div className="post" key={post.id}>
+          <div className="post" key={sedans.id}>
+            <div className="container">
 
-            <h2>{post.carro}</h2>
+              <h4 >{sedans.marca}</h4>
+              <h4 >{sedans.modelo}</h4>
+              <h4 >{sedans.ano}</h4>
+              <h4 >{sedans.cor}</h4>
 
-            <p>{post.placa}</p>
-            <p>{post.telefone}</p>
-            
+              <Link className="btn-btn" to={`/NewPost`}>
+                Inserir veículo
+              </Link>
+            </div>
           </div>
         ))
       )}
     </div>
   );
+
 };
 
 export default Home

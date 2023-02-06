@@ -1,28 +1,40 @@
+
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Blinker";
+  margin: 0;
+  padding: 0;
+  font-family: "Blinker", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  justify-content: space-around;
+  
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+  background-color: #101f30;
+  color: #fff;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
-    opacity: 0.7;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-p {
-    color: #a9abb3;
+p, h1, h4{
+  color: #c90f0d;
+  
 }

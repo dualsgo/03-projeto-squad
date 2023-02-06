@@ -1,36 +1,66 @@
-.home h1{
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 1.5rem;
+
+.casa{
+  border-top: 5px double #c90f0d;
+  margin-top: 25px;
 }
-.post{
-display: flex;
-flex-direction: column;
-margin-bottom: 1.5rem;
-padding-bottom: 1.5rem;
-border-bottom: 1px solid #777;
+.home h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.post h2, .post p {
-    margin-bottom: 1rem;
+.post {
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 5px double #c90f0d;
+}
+.container img{
+  width:650px ;
+  height:450px;
+  float: left;
+  margin-right: 20px;
+}
+.post h2,
+.post p, h4 {
+  margin-bottom: 1rem;
+  
 }
 
-.post h2::first-letter{ text-transform: uppercase;}
-
-.btn{
-    background-color: #fff;
-    color: #0e1217;
-    border: 1px solid #fff;
-    opacity: 1;
-    padding: .5rem 1rem;
-    border-radius: 1rem;
-    text-align: center;
-    cursor: pointer;
-    transition: .3s;
-    max-width: 100px;
+.post h2::first-letter {
+  text-transform: uppercase;
 }
 
-.btn:hover{
-    color: #fff;
-    background-color: #0e1217;
+.btn-btn {
+  background-color: rgb(240, 240, 240);
+  color: #101f30;
+  border: 2px solid #c90f0d;
+  opacity: 15;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  max-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.8s;
+  
 }
+
+.btn-btn:hover {
+  color: #c90f0d;
+  background-color: #101f30;
+}
+.animate__animated{
+  
+  animation: lightSpeedInRight; 
+  animation-duration: 5s; 
+  
+}
+h4:hover{
+  animation:alternate;
+  cursor: pointer;
+  animation-duration: 5s;
+  color: #000;
+}
+
+
