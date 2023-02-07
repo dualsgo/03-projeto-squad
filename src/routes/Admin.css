@@ -14,6 +14,7 @@
   padding: 5px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .delete-btn {
@@ -22,4 +23,11 @@
   padding: 5px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  color: #000;
+}
+.edit-btn:hover {
+  color: #000;
 }
