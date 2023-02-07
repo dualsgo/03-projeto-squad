@@ -1,90 +1,90 @@
 const express = require('express')
-const {response} = require('express')
-const {uuid} = require('uuidv4')//coloca id unico
+const { response } = require('express')
+const { uuid } = require('uuidv4')//coloca id unico
 
 const app = express()
 app.use(express.json())
-const Casas = []
-const Apartamentos = []
-const Lancamentos = []
+const sedan = []
+const hatch = []
+const suv = []
 
 //-----------------------------------------VISUALIZAR----------------------------------------------------
-app.get('/Casas', (request, response) =>{
-    return response.json(Casas)
+app.get('/sedan', (request, response) => {
+    return response.json(sedan)
 })
-app.get('/Apartamentos', (request, response) =>{
-    return response.json(Apartamentos)
+app.get('/hatch', (request, response) => {
+    return response.json(hatch)
 })
-app.get('/Lancamentos', (request, response) =>{
-    return response.json(Lancamentos)
+app.get('/suv', (request, response) => {
+    return response.json(suv)
 })
 
 //------------------------------------------INSERIR------------------------------------------------------
-app.post('/Casas', (request, response) => {  
-    const {tipo, quartos, suite, tamanho} = request.body
-    const casa = {id: uuid(), tipo, quartos, suite, tamanho}
-    Casas.push(casa)
-    return response.status(201).json(casa)
+app.post('/sedan', (request, response) => {
+    const { marca, modelo, ano, cor } = request.body
+    const sedan = { id: uuid(), marca, modelo, ano, cor }
+    sedan.push(sedan)
+    return response.status(201).json(sedan)
 })
-app.post('/Apartamentos', (request, response) => {
-    const {tipo, quartos, suite, tamanho} = request.body
-    const apt = {id: uuid(), tipo, quartos, suite, tamanho}
-    Apartamentos.push(apt)
-    return response.status(201).json(apt)
+app.post('/hatch', (request, response) => {
+    const { marca, modelo, ano, cor } = request.body
+    const hatch = { id: uuid(), marca, modelo, ano, cor }
+    hatch.push(hatch)
+    return response.status(201).json(hatch)
 })
-app.post('/Lancamentos', (request, response) => {  
-    const {regiao, tamanho, bairro, entrega} = request.body
-    const lancamento = {id: uuid(), regiao, tamanho, bairro, entrega}
-    Lancamentos.push(lancamento)
-    return response.status(201).json(lancamento)
+app.post('/suv', (request, response) => {
+    const { marca, modelo, ano, cor } = request.body
+    const suv = { id: uuid(), marca, modelo, ano, cor }
+    suv.push(suv)
+    return response.status(201).json(suv)
 })
 
 //--------------------------------------------ATUALIZAR------------------------------------------------
-app.put('/Casas/:id', (request, response) => {
+app.put('/sedan/:id', (request, response) => {
     const { id } = request.params
-    const { tipo, quartos, suite, tamanho } = request.body
-    const newCasas= { id, tipo, quartos, suite, tamanho }
-    const casaindex = Casas.findIndex(casa => casa.id == id)
-    Casas[casaindex] = newCasas;
-    return response.json(newCasas)
+    const { marca, modelo, ano, cor } = request.body
+    const newsedan = { id, marca, modelo, modelo, cor }
+    const sedanindex = sedan.findIndex(sedan => sedan.id == id)
+    sedan[sedanindex] = newsedan;
+    return response.json(newsedan)
 })
-app.put('/Apartamentos/:id', (request, response) => {
+app.put('/hatch/:id', (request, response) => {
     const { id } = request.params
-    const { tipo, quartos, suite, tamanho } = request.body
-    const newApartamentos= { id, tipo, quartos, suite, tamanho }
-    const aptindex = Apartamentos.findIndex(apt => apt.id == id)
-    Apartamentos[aptindex] = newApartamentos;
-    return response.json(newApartamentos)
+    const { marca, modelo, ano, cor } = request.body
+    const newhatch = { id, marca, modelo, modelo, cor }
+    const hatchindex = hatch.findIndex(hatch => hatch.id == id)
+    hatch[hatchindex] = newhatch;
+    return response.json(newhatch)
 })
-app.put('/Lancamentos/:id', (request, response) => {
+app.put('/suv/:id', (request, response) => {
     const { id } = request.params
-    const { regiao, tamanho, bairro, entrega } = request.body
-    const newLancamentos= { regiao, tamanho, bairro, entrega }
-    const lancamentoindex = Lancamentos.findIndex(lancamento => lancamento.id == id)
-    Lancamentos[lancamentoindex] = newLancamentos;
-    return response.json(newLancamentos)
+    const { marca, modelo, ano, cor } = request.body
+    const newsuv = { id, marca, modelo, modelo, cor }
+    const suvindex = suv.findIndex(suv => suv.id == id)
+    suv[suvindex] = newsuv;
+    return response.json(newsuv)
 })
 
 //-------------------------------------------APAGAR------------------------------------------------------
-app.delete('/Casas/:id', (request, response) => {
+app.delete('/sedan/:id', (request, response) => {
     const { id } = request.params
-    const casaindex = Casas.findIndex(casa => casa.id == id)
-    Casas.splice(casaindex, 1)
+    const sedanindex = sedan.findIndex(sedan => sedan.id == id)
+    sedan.splice(sedanindex, 1)
     return response.status(204).send()
 })
-app.delete('/Apartamentos/:id', (request, response) => {
+app.delete('/hatch/:id', (request, response) => {
     const { id } = request.params
-    const aptindex = Apartamentos.findIndex(apt => apt.id == id)
-    Apartamentos.splice(aptindex, 1)
+    const hatchindex = hatch.findIndex(hatch => hatch.id == id)
+    hatch.splice(hatchindex, 1)
     return response.status(204).send()
 })
-app.delete('/Lancamentos/:id', (request, response) => {
+app.delete('/suv/:id', (request, response) => {
     const { id } = request.params
-    const lancamentoindex = Lancamentos.findIndex(lancamento => lancamento.id == id)
-    Lancamentos.splice(lancamentoindex, 1)
+    const suvindex = suv.findIndex(suv => suv.id == id)
+    suv.splice(suvindex, 1)
     return response.status(204).send()
 })
 
-app.listen(8181, () =>{
+app.listen(8181, () => {
     console.log('O servidor foi iniciado!')
 })

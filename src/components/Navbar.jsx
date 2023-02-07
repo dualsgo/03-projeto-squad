@@ -19,7 +19,13 @@ const Navbar = () => {
           <Link to={`/suv`} >SUV</Link>
         </li>
         <li>
-          <Link to={`/admin`}>Gerenciar</Link>
+          <Link to={`/admin`}>Gerenciar Sedan</Link>
+        </li>
+        <li>
+          <Link to={`/admin2`}>Gerenciar Hatch</Link>
+        </li>
+        <li>
+          <Link to={`/admin3`}>Gerenciar SUV</Link>
         </li>
       </ul>
     </nav>

@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 import "./Admin.css";
 import axios from "axios";
 
-const Admin = () => {
+const Admin2 = () => {
   const [posts, setPosts] = useState([]);
 
   const getPosts = async () => {
     try {
-      const response = await bancodadosFetch.get("/sedan");
-      await bancodadosFetch.get("/hatch");
-      await bancodadosFetch.get("/suv")
+      const response =
+
+        await bancodadosFetch.get("/hatch")
 
       const data = response.data;
 
@@ -25,8 +25,7 @@ const Admin = () => {
   };
 
   const deletePost = async (id) => {
-    await bancodadosFetch.delete(`/sedan/${id}`);
-    await bancodadosFetch.delete(`/hatch/${id}`);
+
     await bancodadosFetch.delete(`/suv/${id}`);
 
     const filteredPosts = posts.filter((post) => post.id !== id);
@@ -68,4 +67,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Admin2;

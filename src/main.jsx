@@ -8,6 +8,8 @@ import App from "./App";
 import Home from "./routes/Home";
 import Post from "./routes/Post";
 import Admin from "./routes/Admin";
+import Admin2 from "./routes/Admin2";
+import Admin3 from "./routes/Admin3";
 import EditPost from "./routes/EditPost";
 import Suvs from "./routes/Suvs";
 import Hatch from "./routes/Hatch";
@@ -31,6 +33,12 @@ const router = createBrowserRouter([
       {
         path: "/admin",
         element: <Admin />,
+      }, {
+        path: "/admin2",
+        element: <Admin2 />,
+      }, {
+        path: "/admin3",
+        element: <Admin3 />,
       },
       ,
       {
