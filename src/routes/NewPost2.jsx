@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 
 import "./NewPost.css";
 
-const NewPost = () => {
+const NewPost2 = () => {
   const navigate = useNavigate();
 
   const [marca, setMarca] = useState();
@@ -22,7 +22,7 @@ const NewPost = () => {
 
     const post = { marca, modelo, ano, cor };
 
-    await bancodadosFetch.post("/sedan", {
+    await bancodadosFetch.post("/hatch", {
       marca, modelo, ano, cor
     })
 
@@ -67,5 +67,5 @@ const NewPost = () => {
   );
 };
 
-export default NewPost;
+export default NewPost2;
 

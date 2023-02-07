@@ -17,8 +17,7 @@ const NewPost = () => {
 
   const getPost = async () => {
     try {
-      const response = 
-        await bancodadosFetch.get(`/sedan/${id}`);
+      const response = await bancodadosFetch.get(`/hatch/${id}`)
 
 
       const data = response.data;
@@ -39,9 +38,10 @@ const NewPost = () => {
 
     const post = { marca, modelo, ano, cor, };
 
-    await bancodadosFetch.put(`/sedan/${id}`, {
+    await bancodadosFetch.put(`/hatch/${id}`, {
       marca, modelo, ano, cor
     });
+
 
     navigate("/");
   };

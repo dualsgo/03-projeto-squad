@@ -45,7 +45,7 @@ const Hatch = () => {
             <div className="container">
               <h4 ><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
               <h4 ><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4><br />
-              <Link className="btn-btn" to={`/NewPost`}>
+              <Link className="btn-btn" to={`/NewPost2`}>
                 Inserir Post
               </Link>
             </div>

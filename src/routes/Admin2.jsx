@@ -26,7 +26,7 @@ const Admin2 = () => {
 
   const deletePost = async (id) => {
 
-    await bancodadosFetch.delete(`/suv/${id}`);
+    await bancodadosFetch.delete(`/hatch/${id}`);
 
     const filteredPosts = posts.filter((post) => post.id !== id);
 

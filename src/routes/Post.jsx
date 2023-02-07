@@ -13,8 +13,7 @@ const Post = () => {
   const getPost = async () => {
     try {
       const response = await bancodadosFetch.get(`/sedan/${id}`)
-      await bancodadosFetch.get(`/hatch/${id}`);
-      await bancodadosFetch.get(`/suv/${id}`);
+
 
 
       const data = response.data;
@@ -35,8 +34,8 @@ const Post = () => {
         <p>Carregando conteúdo. Por favor, aguarde...</p>
       ) : (
         <div className="post">
-            <h2>Veículo: {post.marca} - {post.modelo}</h2>
-            <h2>{post.ano} - {post.cor}</h2>
+          <h2>Veículo: {post.marca} - {post.modelo}</h2>
+          <h2>{post.ano} - {post.cor}</h2>
         </div>
       )}
     </div>

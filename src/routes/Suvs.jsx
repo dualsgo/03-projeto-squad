@@ -49,7 +49,7 @@ const Suv = () => {
               <h4 ><span>Veículo:</span> {suvs.marca} / {suvs.modelo}</h4>
               <h4 ><span>Infos adicionais: </span>{suvs.ano} / {suvs.cor}</h4><br />
 
-              <Link className="btn-btn" to={`/NewPost`}>
+              <Link className="btn-btn" to={`/NewPost3`}>
                 Inserir veículo
               </Link>
             </div>

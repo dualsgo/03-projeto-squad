@@ -13,8 +13,7 @@ const Admin = () => {
   const getPosts = async () => {
     try {
       const response = await bancodadosFetch.get("/sedan");
-      await bancodadosFetch.get("/hatch");
-      await bancodadosFetch.get("/suv")
+
 
       const data = response.data;
 
@@ -26,8 +25,7 @@ const Admin = () => {
 
   const deletePost = async (id) => {
     await bancodadosFetch.delete(`/sedan/${id}`);
-    await bancodadosFetch.delete(`/hatch/${id}`);
-    await bancodadosFetch.delete(`/suv/${id}`);
+
 
     const filteredPosts = posts.filter((post) => post.id !== id);
 

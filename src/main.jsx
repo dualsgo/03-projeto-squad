@@ -11,9 +11,14 @@ import Admin from "./routes/Admin";
 import Admin2 from "./routes/Admin2";
 import Admin3 from "./routes/Admin3";
 import EditPost from "./routes/EditPost";
+import EditPost2 from "./routes/EditPost2";
+import EditPost3 from "./routes/EditPost3";
 import Suvs from "./routes/Suvs";
 import Hatch from "./routes/Hatch";
 import NewPost from "./routes/NewPost";
+import NewPost2 from "./routes/NewPost2";
+import NewPost3 from "./routes/NewPost3";
+
 
 
 import "./index.css";
@@ -40,10 +45,17 @@ const router = createBrowserRouter([
         path: "/admin3",
         element: <Admin3 />,
       },
-      ,
       {
         path: "/posts/edit/:id",
         element: <EditPost />,
+      },
+      {
+        path: "/posts2/edit/:id",
+        element: <EditPost2 />,
+      },
+      {
+        path: "/posts3/edit/:id",
+        element: <EditPost3 />,
       },
       {
         path: "/Suv",
@@ -56,6 +68,14 @@ const router = createBrowserRouter([
       {
         path: "/NewPost",
         element: <NewPost />,
+      },
+      {
+        path: "/NewPost2",
+        element: <NewPost2 />,
+      },
+      {
+        path: "/NewPost3",
+        element: <NewPost3 />,
       },
     ],
   },
