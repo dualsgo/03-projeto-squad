@@ -30,7 +30,9 @@ const Suv = () => {
       <Link className="btn-btn" to={`/NewPost3`}>
         Cadastrar veículo
       </Link>
-      <h1 className="casa">Veículos SUV</h1>
+
+      <h1 className="titulo">Tipo de veículo: SUV</h1>
+
       {suvs.length === 0 ? (
         <p className="aguarde">Carregando conteúdo. Por favor, aguarde...</p>
       ) : (

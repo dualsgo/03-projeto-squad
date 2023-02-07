@@ -5,15 +5,21 @@
 
 .actions {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .edit-btn {
   background-color: #13c9e9;
   color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .delete-btn {
   background-color: #eb1717;
   color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
 }

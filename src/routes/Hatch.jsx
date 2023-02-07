@@ -30,7 +30,7 @@ const Hatch = () => {
       <Link className="btn-btn" to={`/NewPost2`}>
         Cadastrar veículo
       </Link>
-      <h1 className="casa">Veículos HATCH</h1>
+      <h1 className="titulo">Tipo de veículo: HATCH</h1>
       {hatch.length === 0 ? (
         <p className="aguarde">Carregando o conteúdo. Por favor, aguarde...</p>
       ) : (
@@ -39,7 +39,7 @@ const Hatch = () => {
             <div className="container">
               <h4 ><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
               <h4 ><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4><br />
-{/*               <Link className="btn-btn" to={`/NewPost2`}>
+              {/*               <Link className="btn-btn" to={`/NewPost2`}>
                 Cadastrar veículo
               </Link> */}
             </div>

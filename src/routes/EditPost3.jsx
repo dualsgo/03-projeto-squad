@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./NewPost.css";
 
-const NewPost = () => {
+const NewPost3 = () => {
   const navigate = useNavigate();
 
   const [marca, setMarca] = useState();
@@ -91,5 +91,5 @@ const NewPost = () => {
   );
 };
 
-export default NewPost;
+export default NewPost3;
 

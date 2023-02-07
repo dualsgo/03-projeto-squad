@@ -31,6 +31,7 @@ const Admin = () => {
   useEffect(() => {
     getPosts();
   }, []);
+
   return (
     <div className="admin">
       <h1>Gerenciar veículos</h1>
@@ -39,10 +40,10 @@ const Admin = () => {
       ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>
-            <h2>{post.marca}</h2>
-            <h2>{post.modelo}</h2>
-            <h2>{post.ano}</h2>
-            <h2>{post.cor}</h2>
+            <h2><span>Marca do veículo:</span> {post.marca}</h2>
+            <h2><span>Modelo do veículo:</span> {post.modelo}</h2>
+            <h2><span>Ano de fabricação:</span> {post.ano}</h2>
+            <h2><span>Cor do veículo:</span> {post.cor}</h2>
 
             <div className="actions">
               <Link className="btn edit-btn" to={`/posts/edit/${post.id}`}>
