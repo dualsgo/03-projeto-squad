@@ -1,9 +1,6 @@
 import bancodadosFetch from "../axios/config";
-
 import { useState, useEffect } from "react";
-
 import { useParams, useNavigate } from "react-router-dom";
-
 import "./NewPost.css";
 
 const NewPost = () => {
@@ -88,7 +85,7 @@ const NewPost = () => {
           ></textarea>
 
         </div>
-        <input type="submit" value="Editar Post" className="botaoeditar" />
+        <input type="submit" value="Confirmar edições" className="botaoeditar" />
       </form>
     </div>
   );

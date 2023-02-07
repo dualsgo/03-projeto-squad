@@ -1,12 +1,6 @@
 import bancodadosFetch from "../axios/config";
-
 import { useState, useEffect } from "react";
-
 import { Link } from "react-router-dom";
-
-
-import Menu from "../components/Menu"
-
 import "./Home.css";
 
 
@@ -33,9 +27,9 @@ const Hatch = () => {
 
   return (
     <div className="home">
-      <Menu />
-      <br />
-      <br />
+      <Link className="btn-btn" to={`/NewPost2`}>
+        Cadastrar veículo
+      </Link>
       <h1 className="casa">Veículos HATCH</h1>
       {hatch.length === 0 ? (
         <p className="aguarde">Carregando o conteúdo. Por favor, aguarde...</p>
@@ -45,9 +39,9 @@ const Hatch = () => {
             <div className="container">
               <h4 ><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
               <h4 ><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4><br />
-              <Link className="btn-btn" to={`/NewPost2`}>
-                Inserir Post
-              </Link>
+{/*               <Link className="btn-btn" to={`/NewPost2`}>
+                Cadastrar veículo
+              </Link> */}
             </div>
           </div>
         ))

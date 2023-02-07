@@ -6,26 +6,26 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h2>
-      Garagem de carros - SENAC Irajá
+        Garagem de carros - SENAC Irajá
       </h2>
       <ul>
         <li>
-          <Link to={`/`}>Sedan</Link>
+          <Link to={`/`}>Lista: Sedans</Link>
         </li>
         <li>
-          <Link to={`/hatch`}>Hatch</Link>
+          <Link to={`/admin`}>Gerenciar: Sedans</Link>
         </li>
         <li>
-          <Link to={`/suv`} >SUV</Link>
+          <Link to={`/hatch`}>Lista: Hatchs</Link>
         </li>
         <li>
-          <Link to={`/admin`}>Gerenciar Sedan</Link>
+          <Link to={`/admin2`}>Gerenciar: Hatchs</Link>
         </li>
         <li>
-          <Link to={`/admin2`}>Gerenciar Hatch</Link>
+          <Link to={`/suv`} >Lista: SUVs</Link>
         </li>
         <li>
-          <Link to={`/admin3`}>Gerenciar SUV</Link>
+          <Link to={`/admin3`}>Gerenciar: SUVs</Link>
         </li>
       </ul>
     </nav>

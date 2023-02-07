@@ -1,11 +1,7 @@
 import bancodadosFetch from "../axios/config";
-
 import { useState, useEffect } from "react";
-
 import { Link } from "react-router-dom";
-
 import "./Admin.css";
-import axios from "axios";
 
 const Admin2 = () => {
   const [posts, setPosts] = useState([]);

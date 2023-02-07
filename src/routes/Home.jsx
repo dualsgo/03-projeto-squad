@@ -1,16 +1,7 @@
 import bancodadosFetch from "../axios/config";
-
 import { useState, useEffect } from "react";
-
 import { Link } from "react-router-dom";
-
 import "./Home.css";
-
-import Menu from "../components/Menu"
-
-
-import Button from 'react-bootstrap/Button';
-
 
 const Home = () => {
   const [sedans, setSedans] = useState([]);
@@ -33,11 +24,11 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Menu />
-      <br />
-      <br />
-
+      <Link className="btn-btn" to={`/NewPost`}>
+        Cadastrar veículo
+      </Link>
       <h1 className="casa">Veículos SEDAN</h1>
+
       {sedans.length === 0 ? (
         <p className="aguarde">Carregando conteúdo. Por favor, aguarde...</p>
       ) : (
@@ -47,9 +38,9 @@ const Home = () => {
             <div className="container">
               <h4 ><span>Veículo:</span> {sedans.marca} / {sedans.modelo}</h4>
               <h4 ><span>Infos adicionais: </span>{sedans.ano} / {sedans.cor}</h4><br />
-              <Link className="btn-btn" to={`/NewPost`}>
-                Inserir veículo
-              </Link>
+{/*               <Link className="btn-btn" to={`/NewPost`}>
+                Cadastrar veículo
+              </Link> */}
             </div>
           </div>
         ))

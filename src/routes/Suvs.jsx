@@ -6,12 +6,6 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 
-import Menu from "../components/Menu"
-
-
-import Button from 'react-bootstrap/Button';
-
-
 const Suv = () => {
   const [suvs, setSuvs] = useState([]);
 
@@ -33,13 +27,12 @@ const Suv = () => {
 
   return (
     <div className="home">
-      <Menu />
-      <br />
-      <br />
-
+      <Link className="btn-btn" to={`/NewPost3`}>
+        Cadastrar veículo
+      </Link>
       <h1 className="casa">Veículos SUV</h1>
       {suvs.length === 0 ? (
-        <p className = "aguarde">Carregando conteúdo. Por favor, aguarde...</p>
+        <p className="aguarde">Carregando conteúdo. Por favor, aguarde...</p>
       ) : (
         suvs.map((suvs) => (
 
@@ -49,9 +42,9 @@ const Suv = () => {
               <h4 ><span>Veículo:</span> {suvs.marca} / {suvs.modelo}</h4>
               <h4 ><span>Infos adicionais: </span>{suvs.ano} / {suvs.cor}</h4><br />
 
-              <Link className="btn-btn" to={`/NewPost3`}>
-                Inserir veículo
-              </Link>
+              {/*               <Link className="btn-btn" to={`/NewPost3`}>
+                Cadastrar veículo
+              </Link> */}
             </div>
           </div>
         ))
