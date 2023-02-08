@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
@@ -21,4 +21,125 @@
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   opacity: 1;
+}
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.menu {
+  width: 100%;
+  height: 50px;
+  background-color:#101f30;
+  padding: 2rem;
+  margin-bottom: 11rem;
+}
+
+.menu>ul {
+  list-style: none;
+  position: relative;
+  margin-left: 50px;
+}
+
+.menu ul li {
+  width: 150px;
+  float: left;
+}
+
+.menu a {
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  background-color: #000;
+  text-align: center;
+}
+
+.menu ul ul {
+  list-style: none;
+  position: absolute;
+  visibility: hidden;
+
+}
+
+.menu ul li:hover ul {
+  visibility: visible;
+}
+
+.menu a:hover {
+  background-color: #f4f4f4;
+}
+
+.menu ul ul li {
+  float: none;
+  border-bottom: solid 1px #000;
+}
+
+.menu ul ul li a {
+  background-color: #000;
+}
+
+#bt_menu {
+  display: none;
+}
+
+label[for='bt_menu'] {
+  padding: 5px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial';
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+label[for='bt_menu']:hover {
+  background-color: #f4f4f4;
+  color: #aaa;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    margin-left: -100%;
+    transition: all .4s;
+  }
+
+  label[for='bt_menu'] {
+    display: block;
+  }
+
+  .menu>ul {
+    margin-left: 0;
+  }
+
+  .menu {
+    margin-top: 5px;
+  }
+
+  .menu ul li {
+    width: 100%;
+    float: none;
+  }
+
+  .menu ul ul {
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .4s;
+  }
+
+  .menu ul li:hover ul {
+    height: auto;
+    max-height: 200px;
+    transition: all .4s;
+  }
+
+  #bt_menu:checked~.menu {
+    margin-left: 0;
+  }
 }
