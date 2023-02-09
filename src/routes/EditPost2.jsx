@@ -53,7 +53,7 @@ const NewPost2 = () => {
       <form onSubmit={(e) => editPost(e)}>
         <div className="form-control">
           <label htmlFor="title">Marca: </label>
-          <input
+          <input type="text" className="inputcadastro"
             placeholder="Digite a marca"
             onChange={(e) => setMarca(e.target.value)}
             value={marca || ""}
@@ -61,32 +61,33 @@ const NewPost2 = () => {
 
 
           <label htmlFor="title">Quantidade de Quartos:</label>
-          <textarea
+          <input type="text" className="inputcadastro"
 
             placeholder="Digite o modelo"
             onChange={(e) => setModelo(e.target.value)}
             value={modelo || ""}
-          ></textarea>
+          ></input >
 
           <label htmlFor="title">Ano:</label>
-          <textarea
+          <input type="number" className="inputcadastro"
 
             placeholder="Digite o ano"
             onChange={(e) => setAno(e.target.value)}
             value={ano || ""}
-          ></textarea>
+          ></input >
 
           <label htmlFor="title">Cor:</label>
-          <textarea
+          <input type="text" className="inputcadastro"
 
             placeholder="Digite a cor"
             onChange={(e) => setCor(e.target.value)}
             value={cor || ""}
-          ></textarea>
+          ></input >
 
         </div>
-        <input type="submit" value="Confirmar edições" className="botaoeditar" />
+        <input type="submit" value="Confirmar edições" className="botaoeditarcad" />
       </form>
+
     </div>
   );
 };

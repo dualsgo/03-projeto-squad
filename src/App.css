@@ -2,3 +2,8 @@
   max-width: 1000px;
   margin: 2rem auto;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+input{color: #000;}

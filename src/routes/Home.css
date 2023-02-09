@@ -17,11 +17,12 @@
   border-bottom: 5px double #000;
 }
 
-.container img {
-  width: 650px;
-  height: 450px;
-  float: left;
-  margin-right: 20px;
+.containerdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .post h2,
@@ -52,3 +53,14 @@ h4 {
 span {
   color: #c90f0d;
 }
+
+.infosapi {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.actions{
+  display: flex;
+align-items: center;
+justify-content: center;;;}

@@ -27,9 +27,14 @@ const Hatch = () => {
 
   return (
     <div className="home">
-      <Link className="btn-btn" to={`/NewPost2`}>
-        Cadastrar veículo
-      </Link>
+      <div className="containerdiv">
+        <Link className="btn-btn" to={`/NewPost2`}>
+          Cadastrar veículo
+        </Link>   <Link className="btn-btn" to={`/Admin2`}>
+          Visualizar cadastros
+        </Link>
+        <br /><br />
+      </div>
       <h1 className="titulo">Tipo de veículo: HATCH</h1>
       {hatch.length === 0 ? (
         <p className="aguarde">Carregando o conteúdo. Por favor, aguarde...</p>
@@ -37,8 +42,8 @@ const Hatch = () => {
         hatch.map((hatch) => (
           <div className="post" key={hatch.id}>
             <div className="container">
-              <h4 ><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
-              <h4 ><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4><br />
+              <h4 className="infosapi"><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4><br />
               {/*               <Link className="btn-btn" to={`/NewPost2`}>
                 Cadastrar veículo
               </Link> */}

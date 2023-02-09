@@ -59,7 +59,7 @@ const Navbar = () => {
             <ul>
               <li><Link to={`/admin`}>Gerenciar: Sedans</Link></li>
               <li><Link to={`/admin2`}>Gerenciar: Hatchs</Link></li>
-              <li><Link to={`/suv`} >Lista: SUVs</Link></li>
+              <li><Link to={`/admin3`} >Gerenciar: SUVs</Link></li>
             </ul>
           </li>
         </ul>

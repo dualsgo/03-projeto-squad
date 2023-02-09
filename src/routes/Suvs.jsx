@@ -27,10 +27,14 @@ const Suv = () => {
 
   return (
     <div className="home">
-      <Link className="btn-btn" to={`/NewPost3`}>
-        Cadastrar veículo
-      </Link>
-
+      <div className="containerdiv">
+        <Link className="btn-btn" to={`/NewPost3`}>
+          Cadastrar veículo
+        </Link>   <Link className="btn-btn" to={`/Admin3`}>
+          Visualizar cadastros
+        </Link>
+        <br /><br />
+      </div>
       <h1 className="titulo">Tipo de veículo: SUV</h1>
 
       {suvs.length === 0 ? (
@@ -41,8 +45,8 @@ const Suv = () => {
           <div className="post" key={suvs.id}>
             <div className="container">
 
-              <h4 ><span>Veículo:</span> {suvs.marca} / {suvs.modelo}</h4>
-              <h4 ><span>Infos adicionais: </span>{suvs.ano} / {suvs.cor}</h4><br />
+              <h4 className="infosapi"><span>Veículo:</span> {suvs.marca} / {suvs.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span>{suvs.ano} / {suvs.cor}</h4><br />
 
               {/*               <Link className="btn-btn" to={`/NewPost3`}>
                 Cadastrar veículo

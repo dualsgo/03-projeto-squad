@@ -36,6 +36,9 @@
   background-color:#101f30;
   padding: 2rem;
   margin-bottom: 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu>ul {
@@ -103,7 +106,8 @@ label[for='bt_menu']:hover {
   color: #aaa;
 }
 
-@media (max-width: 800px) {
+
+/* @media (max-width: 800px) {
   .menu {
     margin-left: -100%;
     transition: all .4s;
@@ -142,4 +146,4 @@ label[for='bt_menu']:hover {
   #bt_menu:checked~.menu {
     margin-left: 0;
   }
-}
+} */

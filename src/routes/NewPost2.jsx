@@ -2,6 +2,7 @@ import bancodadosFetch from "../axios/config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewPost.css";
+import "./Admin.css"
 
 const NewPost2 = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const NewPost2 = () => {
       marca, modelo, ano, cor
     })
 
-    navigate("/");
+    navigate("/hatch");
   };
 
   return (
@@ -29,34 +30,34 @@ const NewPost2 = () => {
       <h2>Inserir novo veículo:</h2>
       <form onSubmit={(e) => createPost(e)}>
         <div className="form-control">
-          <label htmlFor="title">Marca do veículo</label>
-          <input
+          <label htmlFor="title">Marca do veículo:</label>
+          <input type="text" className="inputcadastro"
             placeholder="Digite a marca"
-            onChange={(e) => setMarca(e.target.value)}
+            onChange={(e) => setMarca(e.target.value)} required
           />
 
           <label htmlFor="title">Modelo do veículo:</label>
-          <textarea
+          <input type="text" className="inputcadastro"
 
             placeholder="Digite o modelo."
-            onChange={(e) => setModelo(e.target.value)}
-          ></textarea>
+            onChange={(e) => setModelo(e.target.value)} required
+          ></input>
 
           <label htmlFor="title">Ano de fabricação:</label>
-          <textarea
+          <input type="number" className="inputcadastro"
             placeholder="Digite o ano."
-            onChange={(e) => setAno(e.target.value)}
-          ></textarea>
+            onChange={(e) => setAno(e.target.value)} required
+          ></input>
 
           <label htmlFor="title">Cor do veículo:</label>
-          <textarea
+          <input type="text" className="inputcadastro"
 
             placeholder="Digite a cor"
-            onChange={(e) => setCor(e.target.value)}
-          ></textarea>
+            onChange={(e) => setCor(e.target.value)} required
+          ></input>
 
         </div>
-        <input type="submit" value="Inserir Post" className="btn-btn" />
+        <input type="submit" value="Cadastrar" className="btn-btn edit-btn" />
       </form>
     </div>
   );

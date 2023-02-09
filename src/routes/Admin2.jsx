@@ -2,6 +2,10 @@ import bancodadosFetch from "../axios/config";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Admin.css";
+import "./Home.css";
+import "./NewPost.css";
+
+
 
 const Admin2 = () => {
   const [posts, setPosts] = useState([]);
@@ -40,10 +44,10 @@ const Admin2 = () => {
       ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>
-            <h2><span>Marca do veículo:</span> {post.marca}</h2>
-            <h2><span>Modelo do veículo:</span> {post.modelo}</h2>
-            <h2><span>Ano de fabricação:</span> {post.ano}</h2>
-            <h2><span>Cor do veículo:</span> {post.cor}</h2>
+            <h2 className="infosapi"><span>Marca do veículo:</span> {post.marca}</h2>
+            <h2 className="infosapi"><span>Modelo do veículo:</span> {post.modelo}</h2>
+            <h2 className="infosapi"><span>Ano de fabricação:</span> {post.ano}</h2>
+            <h2 className="infosapi"><span>Cor do veículo:</span> {post.cor}</h2>
 
             <div className="actions">
               <Link className="btn edit-btn" to={`/posts2/edit/${post.id}`}>
