@@ -63,4 +63,10 @@ span {
 .actions{
   display: flex;
 align-items: center;
-justify-content: center;;;}
+justify-content: center}
+
+.imgCar{
+width: 15%;
+aspect-ratio: 3/2;
+object-fit: contain;
+}
