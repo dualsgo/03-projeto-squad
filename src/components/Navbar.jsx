@@ -43,29 +43,29 @@ const Navbar = () => {
 
   return (
 
-      <nav class="menu">
-        <ul>
-          <li>Painel administrativo</li>
-          <li>
-            <a href="#">Cadastros</a>
-            <ul>
-              <li><Link to={`/`}>Lista: Sedans</Link></li>
-              <li><Link to={`/hatch`}>Lista: Hatchs</Link></li>
-              <li><Link to={`/suv`} >Lista: SUVs</Link></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Editor</a>
-            <ul>
-              <li><Link to={`/admin`}>Gerenciar: Sedans</Link></li>
-              <li><Link to={`/admin2`}>Gerenciar: Hatchs</Link></li>
-              <li><Link to={`/admin3`} >Gerenciar: SUVs</Link></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      );
+    <nav class="menu">
+      <ul>
+        <li>Painel administrativo</li>
+        <li>
+          <a href="#">Cadastros</a>
+          <ul>
+            <li><Link to={`/`}>Visualizar: Piso 1</Link></li>
+            <li><Link to={`/andar2`}>Visualizar: Piso 2</Link></li>
+            <li><Link to={`/andar3`} >Visualizar: Piso 3</Link></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Gerenciamento</a>
+          <ul>
+            <li><Link to={`/admin`}>Gerenciar: Piso 1</Link></li>
+            <li><Link to={`/admin2`}>Gerenciar: Piso 2</Link></li>
+            <li><Link to={`/admin3`} >Gerenciar: Piso 3</Link></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 
-      export default Navbar;
+export default Navbar;
