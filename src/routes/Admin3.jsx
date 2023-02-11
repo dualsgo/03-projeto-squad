@@ -42,7 +42,7 @@ const Admin3 = () => {
             <h2 className="infosapi"><span>Cliente:</span> {post.dono}</h2>
             <h2 className="infosapi"><span>Contato cliente:</span> {post.telefone}</h2>
             <div className="actions">
-              <Link className="btn edit-btn" to={`/posts2/edit/${post.id}`}>
+              <Link className="btn edit-btn" to={`/posts3/edit/${post.id}`}>
                 Editar
               </Link>
               <button
