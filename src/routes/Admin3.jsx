@@ -5,11 +5,10 @@ import "./Admin.css";
 
 const Admin3 = () => {
   const [posts, setPosts] = useState([]);
-
   const getPosts = async () => {
     try {
-      const response = 
-      await bancodadosFetch.get("/andar3")
+      const response =
+        await bancodadosFetch.get("/andar3")
       const data = response.data;
 
       setPosts(data);
@@ -42,9 +41,8 @@ const Admin3 = () => {
             <h2 className="infosapi"><span>Placa do veículo:</span> {post.placa}</h2>
             <h2 className="infosapi"><span>Cliente:</span> {post.dono}</h2>
             <h2 className="infosapi"><span>Contato cliente:</span> {post.telefone}</h2>
-
             <div className="actions">
-              <Link className="btn edit-btn" to={`/posts3/edit/${post.id}`}>
+              <Link className="btn edit-btn" to={`/posts2/edit/${post.id}`}>
                 Editar
               </Link>
               <button
@@ -53,8 +51,8 @@ const Admin3 = () => {
               >
                 Excluir
               </button>
-              </div>
             </div>
+          </div>
         ))
       )}
     </div>
