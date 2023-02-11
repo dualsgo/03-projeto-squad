@@ -2,7 +2,6 @@ import bancodadosFetch from "../axios/config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewPost.css";
-import "./Admin.css"
 
 const NewPost2 = () => {
   const navigate = useNavigate();
@@ -11,12 +10,9 @@ const NewPost2 = () => {
   const [modelo, setModelo] = useState();
   const [ano, setAno] = useState();
   const [cor, setCor] = useState();
-
-
   const createPost = async (e) => {
     e.preventDefault();
-
-    const post = { marca, modelo, ano, cor };
+  const post = { marca, modelo, ano, cor };
 
     await bancodadosFetch.post("/hatch", {
       marca, modelo, ano, cor

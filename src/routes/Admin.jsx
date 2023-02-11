@@ -2,16 +2,13 @@ import bancodadosFetch from "../axios/config";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Admin.css";
-import "./Home.css";
-import "./NewPost.css";
-const Admin = () => {
-  const [posts, setPosts] = useState([]);
 
+const Admin = () => {
+  const [posts, setPosts] = useState([])
   const getPosts = async () => {
     try {
-      const response = await bancodadosFetch.get("/sedan");
-
-
+      const response =
+        await bancodadosFetch.get("/sedan");
       const data = response.data;
 
       setPosts(data);
@@ -22,8 +19,6 @@ const Admin = () => {
 
   const deletePost = async (id) => {
     await bancodadosFetch.delete(`/sedan/${id}`);
-
-
     const filteredPosts = posts.filter((post) => post.id !== id);
 
     setPosts(filteredPosts);
@@ -37,7 +32,7 @@ const Admin = () => {
     <div className="admin">
       <h1>Gerenciar veículos</h1>
       {posts.length === 0 ? (
-        <p className="aguarde">Carregando conteúdo. Por favor, aguarde...</p>
+        <p className="aguarde">Carregando o conteúdo da página. Por favor, aguarde...</p>
       ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>

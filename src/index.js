@@ -1,6 +1,6 @@
 const express = require('express')
 const { response } = require('express')
-const { uuid } = require('uuidv4')//coloca id unico
+const { uuid } = require('uuidv4')
 
 const app = express()
 app.use(express.json())
@@ -8,7 +8,6 @@ const sedan = []
 const hatch = []
 const suv = []
 
-//-----------------------------------------VISUALIZAR----------------------------------------------------
 app.get('/sedan', (request, response) => {
     return response.json(sedan)
 })
@@ -19,7 +18,6 @@ app.get('/suv', (request, response) => {
     return response.json(suv)
 })
 
-//------------------------------------------INSERIR------------------------------------------------------
 app.post('/sedan', (request, response) => {
     const { marca, modelo, ano, cor } = request.body
     const sedan = { id: uuid(), marca, modelo, ano, cor }
@@ -39,7 +37,6 @@ app.post('/suv', (request, response) => {
     return response.status(201).json(suv)
 })
 
-//--------------------------------------------ATUALIZAR------------------------------------------------
 app.put('/sedan/:id', (request, response) => {
     const { id } = request.params
     const { marca, modelo, ano, cor } = request.body
@@ -65,7 +62,6 @@ app.put('/suv/:id', (request, response) => {
     return response.json(newsuv)
 })
 
-//-------------------------------------------APAGAR------------------------------------------------------
 app.delete('/sedan/:id', (request, response) => {
     const { id } = request.params
     const sedanindex = sedan.findIndex(sedan => sedan.id == id)
@@ -86,5 +82,5 @@ app.delete('/suv/:id', (request, response) => {
 })
 
 app.listen(8181, () => {
-    console.log('O servidor foi iniciado!')
+    console.log('Servidor iniciado')
 })

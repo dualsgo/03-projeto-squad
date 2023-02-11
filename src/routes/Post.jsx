@@ -1,9 +1,6 @@
 import bancodadosFetch from "../axios/config";
-
 import { useState, useEffect } from "react";
-
 import { useParams } from "react-router-dom";
-
 import './Post.css'
 
 const Post = () => {
@@ -13,9 +10,6 @@ const Post = () => {
   const getPost = async () => {
     try {
       const response = await bancodadosFetch.get(`/sedan/${id}`)
-
-
-
       const data = response.data;
 
       setPost(data);
@@ -31,7 +25,7 @@ const Post = () => {
   return (
     <div className="post-container">
       {!post.marca ? (
-        <p>Carregando conteúdo. Por favor, aguarde...</p>
+        <p>Carregando o conteúdo da página. Por favor, aguarde...</p>
       ) : (
         <div className="post">
           <h2>Veículo: {post.marca} - {post.modelo}</h2>

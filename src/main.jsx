@@ -15,9 +15,6 @@ import Hatch from "./routes/Hatch";
 import NewPost from "./routes/NewPost";
 import NewPost2 from "./routes/NewPost2";
 import NewPost3 from "./routes/NewPost3";
-
-
-
 import "./index.css";
 
 const router = createBrowserRouter([

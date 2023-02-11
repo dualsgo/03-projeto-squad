@@ -2,21 +2,15 @@ import bancodadosFetch from "../axios/config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewPost.css";
-import "./Admin.css"
-
 
 const NewPost3 = () => {
   const navigate = useNavigate();
-
   const [marca, setMarca] = useState();
   const [modelo, setModelo] = useState();
   const [ano, setAno] = useState();
   const [cor, setCor] = useState();
-
-
   const createPost = async (e) => {
     e.preventDefault();
-
     const post = { marca, modelo, ano, cor };
 
     await bancodadosFetch.post("/suv", {

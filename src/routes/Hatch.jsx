@@ -3,16 +3,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-
-
-//Hatch//
 const Hatch = () => {
   const [hatch, setHatch] = useState([]);
-
   const getHatch = async () => {
     try {
       const response = await bancodadosFetch.get("/hatch");
-
       const data = response.data;
 
       setHatch(data);
@@ -43,10 +38,7 @@ const Hatch = () => {
           <div className="post" key={hatch.id}>
             <div className="container">
               <h4 className="infosapi"><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4><br />
-              {/*               <Link className="btn-btn" to={`/NewPost2`}>
-                Cadastrar veículo
-              </Link> */}
+              <h4 className="infosapi"><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4>
             </div>
           </div>
         ))

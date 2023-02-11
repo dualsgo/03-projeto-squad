@@ -11,14 +11,10 @@ const NewPost2 = () => {
   const [ano, setAno] = useState();
   const [cor, setCor] = useState();
   const { id } = useParams();
-
   const getPost = async () => {
     try {
       const response = await bancodadosFetch.get(`/hatch/${id}`)
-
-
       const data = response.data;
-
       console.log(data);
 
       setMarca(data.marca);
@@ -32,13 +28,10 @@ const NewPost2 = () => {
 
   const editPost = async (e) => {
     e.preventDefault();
-
     const post = { marca, modelo, ano, cor, };
-
     await bancodadosFetch.put(`/hatch/${id}`, {
       marca, modelo, ano, cor
     });
-
 
     navigate("/");
   };
@@ -58,7 +51,6 @@ const NewPost2 = () => {
             onChange={(e) => setMarca(e.target.value)}
             value={marca || ""}
           />
-
 
           <label htmlFor="title">Quantidade de Quartos:</label>
           <input type="text" className="inputcadastro"

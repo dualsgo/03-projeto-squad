@@ -5,7 +5,6 @@ import "./NewPost.css";
 
 const NewPost = () => {
   const navigate = useNavigate();
-
   const [marca, setMarca] = useState();
   const [modelo, setModelo] = useState();
   const [ano, setAno] = useState();
@@ -16,10 +15,7 @@ const NewPost = () => {
     try {
       const response =
         await bancodadosFetch.get(`/sedan/${id}`);
-
-
       const data = response.data;
-
       console.log(data);
 
       setMarca(data.marca);
@@ -33,9 +29,7 @@ const NewPost = () => {
 
   const editPost = async (e) => {
     e.preventDefault();
-
     const post = { marca, modelo, ano, cor, };
-
     await bancodadosFetch.put(`/sedan/${id}`, {
       marca, modelo, ano, cor
     });
@@ -53,12 +47,11 @@ const NewPost = () => {
       <form onSubmit={(e) => editPost(e)}>
         <div className="form-control">
           <label htmlFor="title">Marca: </label>
-          <input type="text"  className="inputcadastro"
+          <input type="text" className="inputcadastro"
             placeholder="Digite a marca"
             onChange={(e) => setMarca(e.target.value)}
             value={marca || ""}
           />
-
 
           <label htmlFor="title">Quantidade de Quartos:</label>
           <input type="text" className="inputcadastro"

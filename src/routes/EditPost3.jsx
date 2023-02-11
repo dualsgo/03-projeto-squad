@@ -5,21 +5,16 @@ import "./NewPost.css";
 
 const NewPost3 = () => {
   const navigate = useNavigate();
-
   const [marca, setMarca] = useState();
   const [modelo, setModelo] = useState();
   const [ano, setAno] = useState();
   const [cor, setCor] = useState();
   const { id } = useParams();
-
   const getPost = async () => {
     try {
       const response =
         await bancodadosFetch.get(`/suv/${id}`);
-
-
       const data = response.data;
-
       console.log(data);
 
       setMarca(data.marca);
@@ -33,9 +28,7 @@ const NewPost3 = () => {
 
   const editPost = async (e) => {
     e.preventDefault();
-
     const post = { marca, modelo, ano, cor, };
-
     await bancodadosFetch.put(`/suv/${id}`, {
       marca, modelo, ano, cor
     });
@@ -58,7 +51,6 @@ const NewPost3 = () => {
             onChange={(e) => setMarca(e.target.value)}
             value={marca || ""}
           />
-
 
           <label htmlFor="title">Quantidade de Quartos:</label>
           <input type="text" className="inputcadastro"
