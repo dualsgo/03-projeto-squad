@@ -9,7 +9,7 @@ const Post3 = () => {
 
   const getPost = async () => {
     try {
-      const response = await bancodadosFetch.get(`/suv/${id}`)
+      const response = await bancodadosFetch.get(`/andar3/${id}`)
       const data = response.data;
 
       setPost(data);
@@ -28,8 +28,9 @@ const Post3 = () => {
         <p>Carregando o conteúdo da página. Por favor, aguarde...</p>
       ) : (
         <div className="post">
-          <h2>Veículo: {post.marca} - {post.modelo}</h2>
-          <h2>{post.ano} - {post.cor}</h2>
+            <h2>Veículo: {post.marca} - {post.modelo}</h2>
+            <h2>{post.cor} - {post.placa}</h2>
+            <h2>{post.dono} - {post.telefone}</h2>
         </div>
       )}
     </div>

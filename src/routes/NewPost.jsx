@@ -7,13 +7,15 @@ const NewPost = () => {
   const navigate = useNavigate();
   const [marca, setMarca] = useState();
   const [modelo, setModelo] = useState();
-  const [ano, setAno] = useState();
   const [cor, setCor] = useState();
+  const [placa, setPlaca] = useState();
+  const [dono, setDono] = useState();
+  const [telefone, setTelefone] = useState();
   const createPost = async (e) => {
     e.preventDefault();
-    const post = { marca, modelo, ano, cor };
-    await bancodadosFetch.post("/sedan", {
-      marca, modelo, ano, cor
+    const post = { marca, modelo, cor, placa, dono, telefone };
+    await bancodadosFetch.post("/andar1", {
+      marca, modelo, cor, placa, dono, telefone
     })
 
     navigate("/");
@@ -37,17 +39,31 @@ const NewPost = () => {
             onChange={(e) => setModelo(e.target.value)} required
           ></input>
 
-          <label htmlFor="title">Ano de fabricação:</label>
-          <input type="number" className="inputcadastro"
-            placeholder="Digite o ano."
-            onChange={(e) => setAno(e.target.value)} required
-          ></input>
-
           <label htmlFor="title">Cor do veículo:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite a cor"
             onChange={(e) => setCor(e.target.value)} required
+          ></input>
+
+          <label htmlFor="title">Placa:</label>
+          <input type="number" className="inputcadastro"
+            placeholder="Digite a placa no padrão AAA1234 ou AAA1A23."
+            onChange={(e) => setPlaca(e.target.value)} required
+          ></input>
+
+          <label htmlFor="title">Nome do cliente:</label>
+          <input type="text" className="inputcadastro"
+
+            placeholder="Digite o nome do cliente."
+            onChange={(e) => setDono(e.target.value)} required
+          ></input>
+
+
+          <label htmlFor="title">Telefone:</label>
+          <input type="number" className="inputcadastro"
+            placeholder="Digite o telefone no padrão 21 987654321"
+            onChange={(e) => setTelefone(e.target.value)} required
           ></input>
 
         </div>

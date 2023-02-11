@@ -3,21 +3,21 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Hatch = () => {
-  const [hatch, setHatch] = useState([]);
-  const getHatch = async () => {
+const Andar2 = () => {
+  const [andar2, setAndar2] = useState([]);
+  const getAndar2 = async () => {
     try {
-      const response = await bancodadosFetch.get("/hatch");
+      const response = await bancodadosFetch.get("/andar2");
       const data = response.data;
 
-      setHatch(data);
+      setAndar2(data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getHatch();
+    getAndar2();
   }, []);
 
   return (
@@ -30,15 +30,16 @@ const Hatch = () => {
         </Link>
         <br /><br />
       </div>
-      <h1 className="titulo">Tipo de veículo: HATCH</h1>
-      {hatch.length === 0 ? (
+      <h1 className="titulo">Veículos no segundo piso</h1>
+      {andar2.length === 0 ? (
         <p className="aguarde">Carregando o conteúdo. Por favor, aguarde...</p>
       ) : (
-        hatch.map((hatch) => (
-          <div className="post" key={hatch.id}>
+        andar2.map((andar2) => (
+          <div className="post" key={andar2.id}>
             <div className="container">
-              <h4 className="infosapi"><span>Veículo:</span> {hatch.marca} / {hatch.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span>{hatch.ano} / {hatch.cor}</h4>
+              <h4 className="infosapi"><span>Veículo:</span> {andar2.marca} / {andar2.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span>{andar2.cor} / {andar2.placa}</h4>
+              <h4 className="infosapi"><span>Dados de contato: </span>{andar2.dono} / {andar2.telefone}</h4>
             </div>
           </div>
         ))
@@ -46,4 +47,4 @@ const Hatch = () => {
     </div>
   );
 }
-export default Hatch
+export default Andar2

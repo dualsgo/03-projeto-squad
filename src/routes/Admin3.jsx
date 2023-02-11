@@ -9,7 +9,7 @@ const Admin3 = () => {
   const getPosts = async () => {
     try {
       const response = 
-      await bancodadosFetch.get("/suv")
+      await bancodadosFetch.get("/andar3")
       const data = response.data;
 
       setPosts(data);
@@ -19,7 +19,7 @@ const Admin3 = () => {
   };
 
   const deletePost = async (id) => {
-    await bancodadosFetch.delete(`/suv/${id}`);
+    await bancodadosFetch.delete(`/andar3/${id}`);
     const filteredPosts = posts.filter((post) => post.id !== id);
 
     setPosts(filteredPosts);
@@ -38,8 +38,10 @@ const Admin3 = () => {
           <div className="post" key={post.id}>
             <h2 className="infosapi"><span>Marca do veículo:</span> {post.marca}</h2>
             <h2 className="infosapi"><span>Modelo do veículo:</span> {post.modelo}</h2>
-            <h2 className="infosapi"><span>Ano de fabricação:</span> {post.ano}</h2>
             <h2 className="infosapi"><span>Cor do veículo:</span> {post.cor}</h2>
+            <h2 className="infosapi"><span>Placa do veículo:</span> {post.placa}</h2>
+            <h2 className="infosapi"><span>Cliente:</span> {post.dono}</h2>
+            <h2 className="infosapi"><span>Contato cliente:</span> {post.telefone}</h2>
 
             <div className="actions">
               <Link className="btn edit-btn" to={`/posts3/edit/${post.id}`}>

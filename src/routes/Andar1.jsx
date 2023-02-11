@@ -3,21 +3,21 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Home = () => {
-  const [sedans, setSedans] = useState([]);
-  const getSedan = async () => {
+const Andar1 = () => {
+  const [andar1, setAndar1] = useState([]);
+  const getAndar1 = async () => {
     try {
-      const response = await bancodadosFetch.get("/sedan");
+      const response = await bancodadosFetch.get("/andar1");
       const data = response.data;
 
-      setSedans(data);
+      setAndar1(data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getSedan();
+    getAndar1();
   }, []);
 
   return (
@@ -30,17 +30,18 @@ const Home = () => {
         </Link>
         <br /><br />
       </div>
-      <h1 className="titulo">Tipo de veículo: SEDAN</h1>
+      <h1 className="titulo">Veículos no primeiro piso</h1>
 
-      {sedans.length === 0 ? (
+      {andar1.length === 0 ? (
         <p className="aguarde">Carregando o conteúdo da página. Por favor, aguarde...</p>
       ) : (
-        sedans.map((sedans) => (
+        andar1.map((andar1) => (
 
-          <div className="post" key={sedans.id}>
+          <div className="post" key={andar1.id}>
             <div className="container">
-              <h4 className="infosapi"><span>Veículo:</span> {sedans.marca} / {sedans.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span>{sedans.ano} / {sedans.cor}</h4>
+              <h4 className="infosapi"><span>Veículo:</span> {andar1.marca} / {andar1.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span>{andar1.cor} / {andar1.placa}</h4>
+              <h4 className="infosapi"><span>Dados de contato: </span>{andar1.dono} / {andar1.telefone}</h4>
             </div>
           </div>
         ))
@@ -50,4 +51,4 @@ const Home = () => {
 
 };
 
-export default Home
+export default Andar1
