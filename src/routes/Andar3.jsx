@@ -42,7 +42,7 @@ const Andar3 = () => {
               <div className="containerdiv">
                 <img src="https://cdn-icons-png.flaticon.com/512/3069/3069647.png" className="imgCar" />
               </div>
-              <h4>Veículo cadastrado com sucesso na vaga {andar3.id}</h4>
+              <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar3.id}</h4>
               <h4 className="infosapi"><span>Veículo:</span> {andar3.marca} / {andar3.modelo}</h4>
               <h4 className="infosapi"><span>Infos adicionais: </span>{andar3.cor} / {andar3.placa}</h4>
               <h4 className="infosapi"><span>Dados de contato: </span>{andar3.dono} / {andar3.telefone}</h4>
