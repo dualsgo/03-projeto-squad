@@ -39,7 +39,7 @@ const Andar1 = () => {
 
           <div className="post" key={andar1.id}>
             <div className="container">
-              <img src="https://www.flaticon.com/br/icone-gratis/estacionamento_3069647" className="imgCar"/>
+              <img src="https://cdn-icons-png.flaticon.com/512/3069/3069647.png" className="imgCar"/>
               <h4 className="infosapi"><span>Veículo:</span> {andar1.marca} / {andar1.modelo}</h4>
               <h4 className="infosapi"><span>Infos adicionais: </span>{andar1.cor} / {andar1.placa}</h4>
               <h4 className="infosapi"><span>Dados de contato: </span>{andar1.dono} / {andar1.telefone}</h4>
