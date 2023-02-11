@@ -36,7 +36,7 @@ const Andar2 = () => {
       ) : (
         andar2.map((andar2) => (
           <div className="post" key={andar2.id}>
-            <div className="container">
+            <div className="containerCadastros">
               <div className="containerdiv">
                 <img src="https://cdn-icons-png.flaticon.com/512/3069/3069647.png" className="imgCar" />
               </div>

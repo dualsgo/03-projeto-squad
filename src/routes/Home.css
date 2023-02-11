@@ -71,3 +71,11 @@ aspect-ratio: 3/2;
 object-fit: contain;
 align-items: center;
 }
+
+.containerCadastros{
+  display:flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin:1rem;
+  border: solid 1px;
+}
