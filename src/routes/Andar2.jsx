@@ -38,9 +38,10 @@ const Andar2 = () => {
           <div className="post" key={andar2.id}>
             <div className="container">
               <div className="containerdiv">
-                <h4>Veículo cadastrado com sucesso na vaga {andar2.id}</h4>
                 <img src="https://cdn-icons-png.flaticon.com/512/3069/3069647.png" className="imgCar" />
-              </div>              <h4 className="infosapi"><span>Veículo:</span> {andar2.marca} / {andar2.modelo}</h4>
+              </div>
+              <h4>Veículo cadastrado com sucesso na vaga {andar2.id}</h4>
+              <h4 className="infosapi"><span>Veículo:</span> {andar2.marca} / {andar2.modelo}</h4>
               <h4 className="infosapi"><span>Infos adicionais: </span>{andar2.cor} / {andar2.placa}</h4>
               <h4 className="infosapi"><span>Dados de contato: </span>{andar2.dono} / {andar2.telefone}</h4>
             </div>
