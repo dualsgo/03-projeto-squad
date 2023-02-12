@@ -124,6 +124,10 @@ label[for='bt_menu']:hover {
   }
 }
 
+nav {
+  margin-bottom: 10em
+}
+
 /* 
   .menu {
     margin-left: -100%;

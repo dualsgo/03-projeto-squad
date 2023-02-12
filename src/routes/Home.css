@@ -106,3 +106,10 @@ align-items: center;
   font-weight: 300;
   font-size: 3rem;
 }
+
+@media (max-width: 800px) {.imgCar {
+    width: 50%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    align-items: center;
+  }}

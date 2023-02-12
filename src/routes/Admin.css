@@ -41,3 +41,14 @@
       margin-bottom: 5rem;
       padding: 2rem;
 }
+
+@media (max-width: 800px) {
+  .post {
+      max-width: 500px;
+      width: 75%;
+      margin: 0 auto;
+      border: solid 1px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.1) 0px 18px 36px -18px inset;
+      margin-bottom: 5rem;
+    }
+}
