@@ -93,7 +93,7 @@ const NewPost2 = () => {
           ></input >
 
           <label htmlFor="title">📱 Telefone</label>
-          <input type="number" className="inputcadastro"
+          <input type="tel" className="inputcadastro"
 
             placeholder="Digite o telefone no padrão 21 987654321"
             onChange={(e) => setTelefone(e.target.value)}

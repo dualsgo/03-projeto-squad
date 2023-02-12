@@ -55,6 +55,7 @@ const NewPost = () => {
         <div className="form-control">
           <label htmlFor="title">🚗 Marca:</label>
           <input type="text" className="inputcadastro"
+            pattern="[a-z]*"
             placeholder="Digite a marca"
             onChange={(e) => setMarca(e.target.value)}
             value={marca || ""}
@@ -62,7 +63,7 @@ const NewPost = () => {
 
           <label htmlFor="title">🚗 Modelo:</label>
           <input type="text" className="inputcadastro"
-
+            pattern="[a-z]*"
             placeholder="Digite o modelo"
             onChange={(e) => setModelo(e.target.value)}
             value={modelo || ""}
@@ -70,7 +71,7 @@ const NewPost = () => {
 
           <label htmlFor="title">🎨 Cor:</label>
           <input type="text" className="inputcadastro"
-
+            pattern="[a-z]*"
             placeholder="Digite a cor"
             onChange={(e) => setCor(e.target.value)}
             value={cor || ""}
@@ -78,7 +79,7 @@ const NewPost = () => {
 
           <label htmlFor="title">🚗 Placa:</label>
           <input type="text" className="inputcadastro"
-
+            pattern="[a-z],[0,9]*"
             placeholder="Digite a placa no padrão AAA1234 ou AAA1A23"
             onChange={(e) => setPlaca(e.target.value)}
             value={placa || ""}
@@ -86,15 +87,15 @@ const NewPost = () => {
 
           <label htmlFor="title">👤 Dono:</label>
           <input type="text" className="inputcadastro"
-
+            pattern="[a-z]*"
             placeholder="Digite o nome do cliente"
             onChange={(e) => setDono(e.target.value)}
             value={dono || ""}
           ></input >
 
           <label htmlFor="title">📱 Telefone</label>
-          <input type="number" className="inputcadastro"
-
+          <input type="tel" className="inputcadastro"
+            pattern="[0-9]*"
             placeholder="Digite o telefone no padrão 21 987654321"
             onChange={(e) => setTelefone(e.target.value)}
             value={telefone || ""}
