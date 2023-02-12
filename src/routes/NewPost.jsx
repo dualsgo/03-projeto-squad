@@ -23,7 +23,7 @@ const NewPost = () => {
 
   return (
     <div className="new-post">
-      <h2>Inserir novo veículo:</h2>
+      <h2> ➕ Inserir novo veículo:</h2>
       <form onSubmit={(e) => createPost(e)}>
         <div className="form-control">
           <label htmlFor="title">🚗 Marca do veículo:</label>
@@ -47,7 +47,7 @@ const NewPost = () => {
           ></input>
 
           <label htmlFor="title">🚗 Placa:</label>
-          <input type="number" className="inputcadastro"
+          <input type="text" className="inputcadastro"
             placeholder="Digite a placa no padrão AAA1234 ou AAA1A23."
             onChange={(e) => setPlaca(e.target.value)} required
           ></input>
@@ -66,7 +66,7 @@ const NewPost = () => {
           ></input>
 
         </div>
-        <input type="submit" value="Cadastrar" className="btn-btn edit-btn" />
+        <input type="submit" value="Cadastrar 💾" className="btn-btn edit-btn" />
       </form>
     </div>
   );

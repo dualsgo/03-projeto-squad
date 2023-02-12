@@ -29,18 +29,20 @@
   padding: 0;
   color: #fff;
 }
+
 .logo {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   text-transform: uppercase;
   margin-left: 1rem;
-  
+
 }
+
 .menu {
   width: 100%;
   height: 50px;
-  background-color:#000;
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,7 +115,16 @@ label[for='bt_menu']:hover {
 }
 
 
-/* @media (max-width: 800px) {
+@media (max-width: 800px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* 
   .menu {
     margin-left: -100%;
     transition: all .4s;

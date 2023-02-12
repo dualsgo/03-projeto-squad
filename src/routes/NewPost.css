@@ -45,3 +45,17 @@ form input {
 .inputcadastro {
   color: #000;
 }
+
+.botaoEditar {
+  background-color: #13c9e9;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.botaoEditar:hover {
+  color: #000;
+}

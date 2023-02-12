@@ -24,13 +24,13 @@ const Andar2 = () => {
     <div className="home">
       <div className="containerdiv">
         <Link className="btn-btn" to={`/NewPost2`}>
-          Cadastrar veículo
+          ➕Cadastrar veículo
         </Link>   <Link className="btn-btn" to={`/Admin2`}>
-          Visualizar cadastros
+          👀 Visualizar cadastros
         </Link>
         <br /><br />
       </div>
-      <h1 className="titulo">🏬 Veículos no primeiro piso 🏬</h1>
+      <h1 className="titulo">🏬 Veículos no segundo piso 🏬</h1>
 
       {andar2.length === 0 ? (
         <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde...</p>

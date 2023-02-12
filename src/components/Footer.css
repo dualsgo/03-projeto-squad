@@ -1,0 +1,88 @@
+footer {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Edição do footer de cima */
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.footer-top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Edição dos links */
+.footer-top-left a {
+    text-decoration: none !important;
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-top-right,
+.footer-top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-top-right span {
+    font-weight: 700;
+}
+
+.newsletter {
+    display: flex;
+    ;
+    align-items: center;
+}
+
+.newsletter input {
+    width: 250px;
+    height: 40px;
+    border: 1px solid;
+    outline: none;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 14px;
+    margin-right: 0;
+}
+
+.newsletter button {
+    width: 90px;
+    height: 40px;
+    border: 1px solid;
+    background-color: #5ca720;
+    outline: none;
+    padding: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+/* Editando o footer de baixo */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-top: 2px solid #ddd;
+    background-color: #fff;
+}
+
+/* Edição das imagens do footer */
+.footer-img {
+    height: 25px;
+    text-decoration: none !important;
+    ;
+}

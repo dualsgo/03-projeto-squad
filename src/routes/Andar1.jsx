@@ -24,9 +24,9 @@ const Andar1 = () => {
     <div className="home">
       <div className="containerdiv">
         <Link className="btn-btn" to={`/NewPost`}>
-          Cadastrar veículo
+          ➕ Cadastrar veículo
         </Link>   <Link className="btn-btn" to={`/Admin`}>
-          Visualizar cadastros
+          👀 Visualizar cadastros
         </Link>
         <br /><br />
       </div>
@@ -43,7 +43,7 @@ const Andar1 = () => {
                 <img src="https://cdn-icons-png.flaticon.com/512/708/708980.png" className="imgCar" />
               </div>
               <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar1.id}</h4>
-              <h4 className="infosapi"><span>Veículo:</span><br/>🚗 {andar1.marca} / 🚗 {andar1.modelo}</h4>
+              <h4 className="infosapi"><span>Veículo:</span><br />🚗 {andar1.marca} / 🚗 {andar1.modelo}</h4>
               <h4 className="infosapi"><span>Infos adicionais:</span><br />🎨 {andar1.cor} / 🚗 {andar1.placa}</h4>
               <h4 className="infosapi"><span>Dados de contato:</span><br />👤 {andar1.dono} / 📱 {andar1.telefone}</h4>
             </div>

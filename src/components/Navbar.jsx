@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
 
     <nav className="menu">
-      <p className="logo">🚙 Garagem de carros Senac 🚗</p>
+      <p className="logo"><Link to={`/`}>🚙 Garagem de carros Senac 🚗</Link></p>
       <ul>
         <li>
           <a href="#">✏️ Cadastros</a>

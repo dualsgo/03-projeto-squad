@@ -101,7 +101,7 @@ const NewPost3 = () => {
           ></input >
 
         </div>
-        <input type="submit" value="Confirmar edições" className="botaoeditar" />
+        <input type="submit" value="Confirmar edições 💾" className="botaoEditar" />
       </form>
     </div>
   );
