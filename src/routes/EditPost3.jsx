@@ -39,7 +39,7 @@ const NewPost3 = () => {
       marca, modelo, cor, placa, dono, telefone
     });
 
-    navigate("/");
+    navigate("/admin3");
   };
 
   useEffect(() => {

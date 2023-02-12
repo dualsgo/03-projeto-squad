@@ -29,9 +29,9 @@ const Admin3 = () => {
   }, []);
   return (
     <div className="admin">
-      <h1>⚙️ Gerenciar veículos</h1>
-      {posts.length === 0 ? (
-        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde...</p>
+      <div className="spanTitulo"><h1>⚙️ <span>Gerenciamento de cadastros</span>: Piso 3</h1>
+      </div>      {posts.length === 0 ? (
+        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde... ⌛</p>
       ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>

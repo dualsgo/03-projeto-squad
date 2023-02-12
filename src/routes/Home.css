@@ -104,9 +104,16 @@ align-items: center;
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
+.txtBtn{
+  color: #000;
+}
+.txtBtn:hover {
+  color: #fff;
+text-decoration: #fff;
+}
 @media (max-width: 800px) {.imgCar {
     width: 50%;
     aspect-ratio: 3/2;
