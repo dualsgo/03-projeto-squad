@@ -3,6 +3,9 @@
   margin-top: 25px;
 }
 
+.home{align-items: center;
+  text-align: center;}
+
 .home h1 {
   text-transform: uppercase;
   text-align: center;
@@ -78,4 +81,12 @@ align-items: center;
   padding: 1rem;
   margin:1rem;
   border: solid 1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.5) 0px 18px 36px -18px inset;
+}
+
+.aguarde {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
 }

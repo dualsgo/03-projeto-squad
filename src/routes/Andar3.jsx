@@ -30,22 +30,22 @@ const Andar3 = () => {
         </Link>
         <br /><br />
       </div>
-      <h1 className="titulo">Veículos no primeiro piso</h1>
+      <h1 className="titulo">🏬 Veículos no primeiro piso 🏬</h1>
 
       {andar3.length === 0 ? (
-        <p className="aguarde">Carregando o conteúdo da página. Por favor, aguarde...</p>
+        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde...</p>
       ) : (
         andar3.map((andar3) => (
 
           <div className="post" key={andar3.id}>
             <div className="containerCadastros">
               <div className="containerdiv">
-                <img src="https://cdn-icons-png.flaticon.com/512/3069/3069647.png" className="imgCar" />
+                <img src="https://cdn-icons-png.flaticon.com/512/708/708980.png" className="imgCar" />
               </div>
               <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar3.id}</h4>
-              <h4 className="infosapi"><span>Veículo:</span> {andar3.marca} / {andar3.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span>{andar3.cor} / {andar3.placa}</h4>
-              <h4 className="infosapi"><span>Dados de contato: </span>{andar3.dono} / {andar3.telefone}</h4>
+              <h4 className="infosapi"><span>Veículo:</span>🚗 {andar3.marca} / 🚗 {andar3.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span>🎨 {andar3.cor} / 🚗 {andar3.placa}</h4>
+              <h4 className="infosapi"><span>Dados de contato: </span>👤 {andar3.dono} / 📱 {andar3.telefone}</h4>
             </div>
           </div>
         ))

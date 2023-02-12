@@ -24,12 +24,12 @@ const Post2 = () => {
   return (
     <div className="post-container">
       {!post.marca ? (
-        <p>Carregando o conteúdo da página. Por favor, aguarde...</p>
+        <p>⌛ Carregando o conteúdo da página. Por favor, aguarde...</p>
       ) : (
         <div className="post">
-            <h2>Veículo: {post.marca} - {post.modelo}</h2>
-            <h2>{post.cor} - {post.placa}</h2>
-            <h2>{post.dono} - {post.telefone}</h2>
+            <h2>Veículo: 🚗 {post.marca} - 🚗 {post.modelo}</h2>
+            <h2>🎨 {post.cor} - 🚗 {post.placa}</h2>
+            <h2>👤 {post.dono} - 📱 {post.telefone}</h2>
         </div>
       )}
     </div>

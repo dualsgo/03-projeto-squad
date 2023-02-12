@@ -53,14 +53,14 @@ const NewPost3 = () => {
 
       <form onSubmit={(e) => editPost(e)}>
         <div className="form-control">
-          <label htmlFor="title">Marca: </label>
+          <label htmlFor="title">🚗 Marca:</label>
           <input type="text" className="inputcadastro"
             placeholder="Digite a marca"
             onChange={(e) => setMarca(e.target.value)}
             value={marca || ""}
           />
 
-          <label htmlFor="title">Modelo</label>
+          <label htmlFor="title">🚗 Modelo:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite o modelo"
@@ -68,7 +68,7 @@ const NewPost3 = () => {
             value={modelo || ""}
           ></input >
 
-          <label htmlFor="title">Cor:</label>
+          <label htmlFor="title">🎨 Cor:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite a cor"
@@ -76,7 +76,7 @@ const NewPost3 = () => {
             value={cor || ""}
           ></input >
 
-          <label htmlFor="title">Placa:</label>
+          <label htmlFor="title">🚗 Placa:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite a placa no padrão AAA1234 ou AAA1A23"
@@ -84,7 +84,7 @@ const NewPost3 = () => {
             value={placa || ""}
           ></input >
 
-          <label htmlFor="title">Dono:</label>
+          <label htmlFor="title">👤 Dono:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite o nome do cliente"
@@ -92,7 +92,7 @@ const NewPost3 = () => {
             value={dono || ""}
           ></input >
 
-          <label htmlFor="title">Telefone</label>
+          <label htmlFor="title">📱 Telefone</label>
           <input type="number" className="inputcadastro"
 
             placeholder="Digite o telefone no padrão 21 987654321"

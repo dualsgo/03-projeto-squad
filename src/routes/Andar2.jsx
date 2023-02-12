@@ -30,25 +30,29 @@ const Andar2 = () => {
         </Link>
         <br /><br />
       </div>
-      <h1 className="titulo">Veículos no segundo piso</h1>
+      <h1 className="titulo">🏬 Veículos no primeiro piso 🏬</h1>
+
       {andar2.length === 0 ? (
-        <p className="aguarde">Carregando o conteúdo. Por favor, aguarde...</p>
+        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde...</p>
       ) : (
         andar2.map((andar2) => (
+
           <div className="post" key={andar2.id}>
             <div className="containerCadastros">
               <div className="containerdiv">
-                <img src="https://cdn-icons-png.flaticon.com/512/3069/3069647.png" className="imgCar" />
+                <img src="https://cdn-icons-png.flaticon.com/512/708/708980.png" className="imgCar" />
               </div>
               <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar2.id}</h4>
-              <h4 className="infosapi"><span>Veículo:</span> {andar2.marca} / {andar2.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span>{andar2.cor} / {andar2.placa}</h4>
-              <h4 className="infosapi"><span>Dados de contato: </span>{andar2.dono} / {andar2.telefone}</h4>
+              <h4 className="infosapi"><span>Veículo:</span>🚗 {andar2.marca} / 🚗 {andar2.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span>🎨 {andar2.cor} / 🚗 {andar2.placa}</h4>
+              <h4 className="infosapi"><span>Dados de contato: </span>👤 {andar2.dono} / 📱 {andar2.telefone}</h4>
             </div>
           </div>
         ))
       )}
     </div>
   );
-}
+
+};
+
 export default Andar2
