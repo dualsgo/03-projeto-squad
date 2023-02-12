@@ -37,15 +37,15 @@ const Andar2 = () => {
       ) : (
         andar2.map((andar2) => (
 
-          <div className="post" key={andar2.id}>
+          <div className="postRota" key={andar2.id}>
             <div className="containerCadastros">
               <div className="containerdiv">
                 <img src="https://cdn-icons-png.flaticon.com/512/708/708980.png" className="imgCar" />
               </div>
               <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar2.id}</h4>
-              <h4 className="infosapi"><span>Veículo:</span>🚗 {andar2.marca} / 🚗 {andar2.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span>🎨 {andar2.cor} / 🚗 {andar2.placa}</h4>
-              <h4 className="infosapi"><span>Dados de contato: </span>👤 {andar2.dono} / 📱 {andar2.telefone}</h4>
+              <h4 className="infosapi"><span>Veículo:</span><br />🚗 {andar2.marca} / 🚗 {andar2.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span><br />🎨 {andar2.cor} / 🚗 {andar2.placa}</h4>
+              <h4 className="infosapi"><span>Dados de contato: </span><br />👤 {andar2.dono} / 📱 {andar2.telefone}</h4>
             </div>
           </div>
         ))
