@@ -39,7 +39,7 @@ const NewPost = () => {
       marca, modelo, cor, placa, dono, telefone
     });
 
-    navigate("/andar1");
+    navigate("/");
   };
 
   useEffect(() => {
@@ -81,14 +81,14 @@ const NewPost = () => {
             value={placa || ""}
           ></input >
 
-          <label htmlFor="title">👤 Dono:</label>
+          <label htmlFor="title">👤 Dono(a):</label>
           <input type="text" className="inputcadastro"
             placeholder="Digite o nome do cliente"
             onChange={(e) => setDono(e.target.value)}
             value={dono || ""}
           ></input >
 
-          <label htmlFor="title">📱 Telefone</label>
+          <label htmlFor="title">📱 Telefone: </label>
           <input type="tel" className="inputcadastro"
             placeholder="Digite o telefone no padrão 21 987654321"
             onChange={(e) => setTelefone(e.target.value)}

@@ -48,7 +48,7 @@ const Andar3 = () => {
               <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar3.id}</h4>
               <h4 className="infosapi"><span>Veículo:</span><br />🚗 {andar3.marca} / 🚗 {andar3.modelo}</h4>
               <h4 className="infosapi"><span>Infos adicionais: </span><br />🎨 {andar3.cor} / 🚗 {andar3.placa}</h4>
-              <h4 className="infosapi"><span>Dados de contato: </span><br />👤 {andar3.dono} / 📱 {andar3.telefone}</h4>
+              <h4 className="infosapi"><span>Contato: </span><br />👤 {andar3.dono} / 📱 {andar3.telefone}</h4>
             </div>
           </div>
         ))

@@ -23,6 +23,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: auto;
+  height: 23px;
+  font-size: 16px;
 }
 
 .delete-btn {
@@ -32,6 +35,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: auto;
+  height: 33px;
+  font-size: 16px;
 }
 
 .delete-btn:hover {
