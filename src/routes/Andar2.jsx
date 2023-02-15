@@ -36,14 +36,22 @@ const Andar2 = () => {
       <h1 className="titulo">🏬 Veículos no segundo piso 🏬</h1>
 
       {andar2.length === 0 ? (
-        <div className="home">
-        <div class="c-loader"></div>
-          <div className="item">
-            <p className="aguarde">
-              ⌛ Carregando o conteúdo da página. Por favor, aguarde...
-            </p>
-          </div>
-        </div>      ) : (
+        <div class="loading">
+        <h2>Carregando conteúdo</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+              </div>) : (
         andar2.map((andar2) => (
 
           <div className="postRota" key={andar2.id}>

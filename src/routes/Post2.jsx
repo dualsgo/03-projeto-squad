@@ -1,14 +1,14 @@
 import bancodadosFetch from "../axios/config";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import './Post.css'
+import "./Post.css";
 
 const Post2 = () => {
   const { id } = useParams();
   const [post, setPost] = useState([]);
   const getPost = async () => {
     try {
-      const response = await bancodadosFetch.get(`/andar2/${id}`)
+      const response = await bancodadosFetch.get(`/andar2/${id}`);
       const data = response.data;
 
       setPost(data);
@@ -24,18 +24,33 @@ const Post2 = () => {
   return (
     <div className="post-container">
       {!post.marca ? (
-        <div className="home">
-        <div class="c-loader"></div>
-          <div className="item">
-            <p className="aguarde">
-              ⌛ Carregando o conteúdo da página. Por favor, aguarde...
-            </p>
-          </div>
-        </div>      ) : (
+        <div class="loading">
+        <h2>Carregando conteúdo</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+              </div>
+      ) : (
         <div className="post">
-            <h2>Veículo: 🚗 {post.marca} - 🚗 {post.modelo}</h2>
-            <h2>🎨 {post.cor} - 🚗 {post.placa}</h2>
-            <h2>👤 {post.dono} - 📱 {post.telefone}</h2>
+          <h2>
+            Veículo: 🚗 {post.marca} - 🚗 {post.modelo}
+          </h2>
+          <h2>
+            🎨 {post.cor} - 🚗 {post.placa}
+          </h2>
+          <h2>
+            👤 {post.dono} - 📱 {post.telefone}
+          </h2>
         </div>
       )}
     </div>

@@ -39,14 +39,22 @@ const Andar1 = () => {
       <h1 className="titulo">🏬 Veículos no primeiro piso 🏬</h1>
 
       {andar1.length === 0 ? (
-        <div className="home">
-            <div class="c-loader"></div>
-              <div className="item">
-                <p className="aguarde">
-                  ⌛ Carregando o conteúdo da página. Por favor, aguarde...
-                </p>
-              </div>
-            </div>
+        <div class="loading">
+  <h2>Carregando conteúdo</h2>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+        </div>
       ) : (
         andar1.map((andar1) => (
           <div className="postRota" key={andar1.id}>
