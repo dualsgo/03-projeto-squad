@@ -14,7 +14,7 @@ const Navbar = () => {
         <li>
           <a href="#">✏️ Cadastros</a>
           <ul>
-            <li><Link to={`/`}>👀 Visualizar: Piso 1</Link></li>
+            <li><Link to={`/andar1`}>👀 Visualizar: Piso 1</Link></li>
             <li><Link to={`/andar2`}>👀 Visualizar: Piso 2</Link></li>
             <li><Link to={`/andar3`} >👀 Visualizar: Piso 3</Link></li>
           </ul>

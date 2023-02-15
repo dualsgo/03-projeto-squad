@@ -39,7 +39,7 @@ const NewPost = () => {
       marca, modelo, cor, placa, dono, telefone
     });
 
-    navigate("/");
+    navigate("/Andar1");
   };
 
   useEffect(() => {

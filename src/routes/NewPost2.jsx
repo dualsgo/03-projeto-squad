@@ -18,7 +18,7 @@ const NewPost = () => {
       marca, modelo, cor, placa, dono, telefone
     })
 
-    navigate("/");
+    navigate("/Andar2");
   };
 
   return (

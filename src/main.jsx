@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import App from "./App";
-import Andar1 from "./routes/Andar1";
+import Home from "./routes/Home"
 import Post from "./routes/Post";
 import Admin from "./routes/Admin";
 import Admin2 from "./routes/Admin2";
@@ -10,8 +10,9 @@ import Admin3 from "./routes/Admin3";
 import EditPost from "./routes/EditPost";
 import EditPost2 from "./routes/EditPost2";
 import EditPost3 from "./routes/EditPost3";
-import Andar3 from "./routes/Andar3";
+import Andar1 from "./routes/Andar1";
 import Andar2 from "./routes/Andar2";
+import Andar3 from "./routes/Andar3";
 import NewPost from "./routes/NewPost";
 import NewPost2 from "./routes/NewPost2";
 import NewPost3 from "./routes/NewPost3";
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/andar1",
         element: <Andar1 />,
       },
       {
@@ -83,4 +88,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
