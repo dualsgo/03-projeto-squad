@@ -33,8 +33,14 @@ const Admin = () => {
       <div className="spanTitulo"><h1>⚙️ <span>Gerenciamento de cadastros</span>: Piso 1</h1>
       </div>
       {posts.length === 0 ? (
-        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde...⌛</p>
-      ) : (
+        <div className="home">
+        <div class="c-loader"></div>
+          <div className="item">
+            <p className="aguarde">
+              ⌛ Carregando o conteúdo da página. Por favor, aguarde...
+            </p>
+          </div>
+        </div>      ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>
             <h2 className="infosapi"><span>🚗 Vaga:</span> {post.id}</h2>

@@ -3,8 +3,12 @@
   margin-top: 25px;
 }
 
-.home{align-items: center;
-  text-align: center;}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
 .home h1 {
   text-transform: uppercase;
@@ -32,7 +36,6 @@
 .post p,
 h4 {
   margin-bottom: 1rem;
-
 }
 
 .post h2::first-letter {
@@ -50,7 +53,6 @@ h4 {
   text-align: center;
   cursor: pointer;
   transition: 0.8s;
-
 }
 
 .btn-btn:hover {
@@ -64,10 +66,7 @@ h4 {
   text-align: center;
   cursor: pointer;
   transition: 0.8s;
-
 }
-
-
 
 span {
   color: #ffff00;
@@ -79,25 +78,27 @@ span {
   font-size: 2rem;
 }
 
-.actions{
+.actions {
   display: flex;
-align-items: center;
-justify-content: center}
-
-.imgCar{
-width: 20%;
-aspect-ratio: 3/2;
-object-fit: contain;
-align-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.containerCadastros{
-  display:flex;
+.imgCar {
+  width: 20%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  align-items: center;
+}
+
+.containerCadastros {
+  display: flex;
   flex-direction: column;
   padding: 1rem;
-  margin:1rem;
+  margin: 1rem;
   border: solid 1px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.5) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(255, 255, 255, 0.5) 0px 18px 36px -18px inset;
 }
 
 .aguarde {
@@ -107,16 +108,37 @@ align-items: center;
   font-size: 2rem;
 }
 
-.txtBtn{
+.txtBtn {
   color: #000;
 }
 .txtBtn:hover {
   color: #fff;
-text-decoration: #fff;
+  text-decoration: #fff;
 }
-@media (max-width: 800px) {.imgCar {
+@media (max-width: 800px) {
+  .imgCar {
     width: 50%;
     aspect-ratio: 3/2;
     object-fit: contain;
     align-items: center;
-  }}
+  }
+}
+
+.c-loader {
+  animation: is-rotating 3s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transform: scale(1);
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}

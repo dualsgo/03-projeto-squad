@@ -31,8 +31,14 @@ const Admin3 = () => {
     <div className="admin">
       <div className="spanTitulo"><h1>⚙️ <span>Gerenciamento de cadastros</span>: Piso 3</h1>
       </div>      {posts.length === 0 ? (
-        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde... ⌛</p>
-      ) : (
+        <div className="home">
+        <div class="c-loader"></div>
+          <div className="item">
+            <p className="aguarde">
+              ⌛ Carregando o conteúdo da página. Por favor, aguarde...
+            </p>
+          </div>
+        </div>      ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>
             <h2 className="infosapi"><span>🚗 Marca do veículo:</span> {post.marca}</h2>

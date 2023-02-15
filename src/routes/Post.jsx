@@ -25,8 +25,14 @@ const Post = () => {
   return (
     <div className="post-container">
       {!post.marca ? (
-        <p>⌛ Carregando o conteúdo da página. Por favor, aguarde...</p>
-      ) : (
+        <div className="home">
+        <div class="c-loader"></div>
+          <div className="item">
+            <p className="aguarde">
+              ⌛ Carregando o conteúdo da página. Por favor, aguarde...
+            </p>
+          </div>
+        </div>      ) : (
         <div className="post">
             <h2>Veículo: 🚗 {post.marca} - 🚗 {post.modelo}</h2>
             <h2>🎨 {post.cor} - 🚗 {post.placa}</h2>
