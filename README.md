@@ -75,3 +75,37 @@
 - O servidor local será iniciado no navegador.
 
 ##
+
+
+# GARAGEM DE VEÍCULOS
+
+### Home:
+<img src="README/home.JPG">
+<i>A Home conta com a barra de navegação com ancoragem para as demais rotas. Possui espaço para logo (Neste projeto não foi utilizado logo específico pois a ideia é vender um protótipo de sistema que será customizado ao gosto do cliente). Além disso conta com um menu de cadastro, onde é possível visualizar os veículos cadastrados e um menu de gerenciamento, para edições e exclusões de informações.</i><br><br>
+
+### Menus: 
+<i>Os menus são retraidos e ao clicar exibem as ancoragem para as rotas.</i><br><br>
+<img src="README/menus1.JPG"><br>
+<i>Rotas de visualização</i><br><br>
+
+<img src="README/menus2.JPG"><br>
+<i>Rotas de edição e exclusão</i><br><br>
+
+### Rotas:
+
+<img src="README/containerinfos.JPG"><br>
+<i>As informações são exibidas em um container.</i><br><br>
+
+<img src="README/animacao.JPG"><br>
+<i>Há uma pequena animação que é exibida enquanto as informações estão sendo requisitadas para serem exibidas para o usuário.</i><br><br>
+
+<img src="README/botoes.JPG"><br>
+<i>Acima há dois botões que servem de atalho para visualizar (redireciona para a página de edição e exclusão) e um botão que redreciona para a página onde são adicionados novos itens.</i><br><br>
+
+### Editar:
+
+<img src="README/infosedit.JPG"><br>
+<i>Na página de edições, as informações são exibidas em coluna para diferenciar do menu anterior. Abaixo ficam os para abrir o menu de edição e o botão de delete.</i><br><br>
+
+<img src="README/infoseditar.JPG"><br>
+<i>Ao clicar no botão editar, uma janela é aberta com um formulário já preenchido com as informações atuais. O usuário deve selecionar a informação que deseja editar e ao final deve clicar no botão de confirmação. Se houver erro, uma pequena animação no formulário informa ao usuário oque deve ser corrigido. Em caso de sucesso, o usuário é redirecionado para a página de visualização.</i><br><br>
