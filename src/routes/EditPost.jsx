@@ -16,8 +16,7 @@ const NewPost = () => {
 
   const getPost = async () => {
     try {
-      const response =
-        await bancodadosFetch.get(`/andar1/${id}`);
+      const response = await bancodadosFetch.get(`/andar1/${id}`);
       const data = response.data;
       console.log(data);
 
@@ -36,10 +35,15 @@ const NewPost = () => {
     e.preventDefault();
     const post = { marca, modelo, cor, placa, dono, telefone };
     await bancodadosFetch.put(`/andar1/${id}`, {
-      marca, modelo, cor, placa, dono, telefone
+      marca,
+      modelo,
+      cor,
+      placa,
+      dono,
+      telefone,
     });
 
-    navigate("/");
+    navigate("/Andar1");
   };
 
   useEffect(() => {
@@ -48,59 +52,75 @@ const NewPost = () => {
 
   return (
     <div className="new-post">
-      <h2>Editando: {marca} {modelo}</h2>
+      <h2>
+        Editando: {marca} {modelo}
+      </h2>
       <h2>Cliente: {dono}</h2>
 
       <form onSubmit={(e) => editPost(e)}>
         <div className="form-control">
           <label htmlFor="title">🚗 Marca:</label>
-          <input type="text" className="inputcadastro"
+          <input
+            type="text"
+            className="inputcadastro"
             placeholder="Digite a marca"
             onChange={(e) => setMarca(e.target.value)}
             value={marca || ""}
           />
 
           <label htmlFor="title">🚗 Modelo:</label>
-          <input type="text" className="inputcadastro"
+          <input
+            type="text"
+            className="inputcadastro"
             placeholder="Digite o modelo"
             onChange={(e) => setModelo(e.target.value)}
             value={modelo || ""}
-          ></input >
+          ></input>
 
           <label htmlFor="title">🎨 Cor:</label>
-          <input type="text" className="inputcadastro"
+          <input
+            type="text"
+            className="inputcadastro"
             placeholder="Digite a cor"
             onChange={(e) => setCor(e.target.value)}
             value={cor || ""}
-          ></input >
+          ></input>
 
           <label htmlFor="title">🚗 Placa:</label>
-          <input type="text" className="inputcadastro"
+          <input
+            type="text"
+            className="inputcadastro"
             placeholder="Digite a placa no padrão AAA1234 ou AAA1A23"
             onChange={(e) => setPlaca(e.target.value)}
             value={placa || ""}
-          ></input >
+          ></input>
 
           <label htmlFor="title">👤 Dono(a):</label>
-          <input type="text" className="inputcadastro"
+          <input
+            type="text"
+            className="inputcadastro"
             placeholder="Digite o nome do cliente"
             onChange={(e) => setDono(e.target.value)}
             value={dono || ""}
-          ></input >
+          ></input>
 
           <label htmlFor="title">📱 Telefone: </label>
-          <input type="tel" className="inputcadastro"
+          <input
+            type="tel"
+            className="inputcadastro"
             placeholder="Digite o telefone no padrão 21 987654321"
             onChange={(e) => setTelefone(e.target.value)}
             value={telefone || ""}
-          ></input >
-
+          ></input>
         </div>
-        <input type="submit" value="Confirmar edições 💾" className="botaoEditar" />
+        <input
+          type="submit"
+          value="Confirmar edições 💾"
+          className="botaoEditar"
+        />
       </form>
     </div>
   );
 };
 
 export default NewPost;
-

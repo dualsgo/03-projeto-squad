@@ -7,8 +7,7 @@ const Admin2 = () => {
   const [posts, setPosts] = useState([]);
   const getPosts = async () => {
     try {
-      const response =
-        await bancodadosFetch.get("/andar2")
+      const response = await bancodadosFetch.get("/andar2");
       const data = response.data;
 
       setPosts(data);
@@ -29,18 +28,49 @@ const Admin2 = () => {
   }, []);
   return (
     <div className="admin">
-      <div className="spanTitulo"><h1>⚙️ <span>Gerenciamento de cadastros</span>: Piso 2</h1>
-      </div>      {posts.length === 0 ? (
-        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde... ⌛</p>
+      <div className="spanTitulo">
+        <h1>
+          ⚙️ <span>Gerenciamento de cadastros</span>: Piso 2
+        </h1>
+      </div>{" "}
+      {posts.length === 0 ? (
+        <div class="loading">
+        <h2>Carregando conteúdo</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+              </div>
       ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>
-            <h2 className="infosapi"><span>🚗 Marca do veículo:</span> {post.marca}</h2>
-            <h2 className="infosapi"><span> Modelo do veículo:</span> {post.modelo}</h2>
-            <h2 className="infosapi"><span> Cor do veículo:</span> {post.cor}</h2>
-            <h2 className="infosapi"><span> Placa do veículo:</span> {post.placa}</h2>
-            <h2 className="infosapi"><span> Cliente:</span> {post.dono}</h2>
-            <h2 className="infosapi"><span> Contato :</span> {post.telefone}</h2>
+            <h2 className="infosapi">
+              <span>🚗 Marca do veículo:</span> {post.marca}
+            </h2>
+            <h2 className="infosapi">
+              <span> Modelo do veículo:</span> {post.modelo}
+            </h2>
+            <h2 className="infosapi">
+              <span> Cor do veículo:</span> {post.cor}
+            </h2>
+            <h2 className="infosapi">
+              <span> Placa do veículo:</span> {post.placa}
+            </h2>
+            <h2 className="infosapi">
+              <span> Cliente:</span> {post.dono}
+            </h2>
+            <h2 className="infosapi">
+              <span> Contato :</span> {post.telefone}
+            </h2>
             <div className="actions">
               <Link className="btn edit-btn" to={`/posts2/edit/${post.id}`}>
                 💾 Editar

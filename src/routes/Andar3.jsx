@@ -36,8 +36,22 @@ const Andar3 = () => {
       <h1 className="titulo">🏬 Veículos no terceiro piso 🏬</h1>
 
       {andar3.length === 0 ? (
-        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde...</p>
-      ) : (
+        <div class="loading">
+        <h2>Carregando conteúdo</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+              </div>) : (
         andar3.map((andar3) => (
 
           <div className="postRota" key={andar3.id}>
@@ -46,9 +60,9 @@ const Andar3 = () => {
                 <img src="https://cdn-icons-png.flaticon.com/512/708/708980.png" className="imgCar" />
               </div>
               <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar3.id}</h4>
-              <h4 className="infosapi"><span>Veículo:</span><br />🚗 {andar3.marca} / 🚗 {andar3.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span><br />🎨 {andar3.cor} / 🚗 {andar3.placa}</h4>
-              <h4 className="infosapi"><span>Contato: </span><br />👤 {andar3.dono} / 📱 {andar3.telefone}</h4>
+              <h4 className="infosapi"><span>Veículo:</span><br /> {andar3.marca} /  {andar3.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span><br /> {andar3.cor} / {andar3.placa}</h4>
+              <h4 className="infosapi"><span>Contato: </span><br /> {andar3.dono} /  {andar3.telefone}</h4>
             </div>
           </div>
         ))

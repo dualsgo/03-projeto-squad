@@ -18,7 +18,7 @@ const NewPost = () => {
       marca, modelo, cor, placa, dono, telefone
     })
 
-    navigate("/");
+    navigate("/Andar1");
   };
 
   return (
@@ -32,34 +32,34 @@ const NewPost = () => {
             onChange={(e) => setMarca(e.target.value)} required
           />
 
-          <label htmlFor="title">🚗 Modelo do veículo:</label>
+          <label htmlFor="title"> Modelo do veículo:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite o modelo."
             onChange={(e) => setModelo(e.target.value)} required
           ></input>
 
-          <label htmlFor="title">🎨 Cor do veículo:</label>
+          <label htmlFor="title"> Cor do veículo:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite a cor"
             onChange={(e) => setCor(e.target.value)} required
           ></input>
 
-          <label htmlFor="title">🚗 Placa:</label>
+          <label htmlFor="title"> Placa:</label>
           <input type="text" className="inputcadastro"
             placeholder="Digite a placa no padrão AAA1234 ou AAA1A23."
             onChange={(e) => setPlaca(e.target.value)} required
           ></input>
 
-          <label htmlFor="title">👤 Nome do cliente:</label>
+          <label htmlFor="title"> Nome do cliente:</label>
           <input type="text" className="inputcadastro"
 
             placeholder="Digite o nome do cliente."
             onChange={(e) => setDono(e.target.value)} required
           ></input>
 
-          <label htmlFor="title">📱 Telefone:</label>
+          <label htmlFor="title"> Telefone:</label>
           <input type="tel" className="inputcadastro"
             placeholder="Digite o telefone no padrão 21 987654321"
             onChange={(e) => setTelefone(e.target.value)} required

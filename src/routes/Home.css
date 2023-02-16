@@ -3,8 +3,12 @@
   margin-top: 25px;
 }
 
-.home{align-items: center;
-  text-align: center;}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
 .home h1 {
   text-transform: uppercase;
@@ -32,7 +36,6 @@
 .post p,
 h4 {
   margin-bottom: 1rem;
-
 }
 
 .post h2::first-letter {
@@ -50,7 +53,6 @@ h4 {
   text-align: center;
   cursor: pointer;
   transition: 0.8s;
-
 }
 
 .btn-btn:hover {
@@ -64,10 +66,7 @@ h4 {
   text-align: center;
   cursor: pointer;
   transition: 0.8s;
-
 }
-
-
 
 span {
   color: #ffff00;
@@ -79,25 +78,27 @@ span {
   font-size: 2rem;
 }
 
-.actions{
+.actions {
   display: flex;
-align-items: center;
-justify-content: center}
-
-.imgCar{
-width: 20%;
-aspect-ratio: 3/2;
-object-fit: contain;
-align-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.containerCadastros{
-  display:flex;
+.imgCar {
+  width: 20%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  align-items: center;
+}
+
+.containerCadastros {
+  display: flex;
   flex-direction: column;
   padding: 1rem;
-  margin:1rem;
+  margin: 1rem;
   border: solid 1px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.5) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(255, 255, 255, 0.5) 0px 18px 36px -18px inset;
 }
 
 .aguarde {
@@ -107,16 +108,214 @@ align-items: center;
   font-size: 2rem;
 }
 
-.txtBtn{
+.txtBtn {
   color: #000;
 }
 .txtBtn:hover {
   color: #fff;
-text-decoration: #fff;
+  text-decoration: #fff;
 }
-@media (max-width: 800px) {.imgCar {
+@media (max-width: 800px) {
+  .imgCar {
     width: 50%;
     aspect-ratio: 3/2;
     object-fit: contain;
     align-items: center;
-  }}
+  }
+}
+
+/* .c-loader {
+  animation: is-rotating 3s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transform: scale(1);
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+} */
+
+h2 {
+  color: #ccc;
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 5%;
+}
+
+.loading span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.6em;
+  height: 0.6em;
+  margin: 0.19em;
+  background: #007db6;
+  border-radius: 0.6em;
+  animation: loading 1s infinite alternate;
+}
+
+.loading span:nth-of-type(2) {
+  background: #008fb2;
+  animation-delay: 0.2s;
+}
+.loading span:nth-of-type(3) {
+  background: #009b9e;
+  animation-delay: 0.4s;
+}
+.loading span:nth-of-type(4) {
+  background: #00a77d;
+  animation-delay: 0.6s;
+}
+.loading span:nth-of-type(5) {
+  background: #00b247;
+  animation-delay: 0.8s;
+}
+.loading span:nth-of-type(6) {
+  background: #5ab027;
+  animation-delay: 1s;
+}
+.loading span:nth-of-type(7) {
+  background: #a0b61e;
+  animation-delay: 1.2s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*CONFIGURAÇÕES DOS CARDS*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #232427;
+}
+
+body .cardsHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+body .cardsHome .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(225, 225, 225, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+body .cardsHome .card:nth-child(1) .box .content a {
+  background: #ff0000;
+}
+
+body .cardsHome .card:nth-child(2) .box .content a {
+  background: #ffff00;
+}
+
+body .cardsHome .card:nth-child(3) .box .content a {
+  background: #008000;
+}
+
+body .cardsHome .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .cardsHome .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .cardsHome .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .cardsHome .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .cardsHome .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .cardsHome .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .cardsHome .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .cardsHome .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}

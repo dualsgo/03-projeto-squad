@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import "./Admin.css";
 
 const Admin = () => {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([]);
   const getPosts = async () => {
     try {
-      const response =
-        await bancodadosFetch.get("/andar1");
+      const response = await bancodadosFetch.get("/andar1");
       const data = response.data;
 
       setPosts(data);
@@ -30,20 +29,64 @@ const Admin = () => {
 
   return (
     <div className="admin">
-      <div className="spanTitulo"><h1>⚙️ <span>Gerenciamento de cadastros</span>: Piso 1</h1>
+      <div className="spanTitulo">
+        <h1>
+          ⚙️ <span>Gerenciamento de cadastros</span>: Piso 1
+        </h1>
       </div>
       {posts.length === 0 ? (
-        <p className="aguarde">⌛ Carregando o conteúdo da página. Por favor, aguarde...⌛</p>
+        <div class="loading">
+        <h2>Carregando conteúdo</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+              </div>
       ) : (
         posts.map((post) => (
           <div className="post" key={post.id}>
-            <h2 className="infosapi"><span>🚗 Vaga:</span> {post.id}</h2>
-            <h2 className="infosapi"><span> Marca do veículo:</span><br />{post.marca}</h2>
-            <h2 className="infosapi"><span> Modelo do veículo:</span><br />{post.modelo}</h2>
-            <h2 className="infosapi"><span> Cor do veículo:</span><br />{post.cor}</h2>
-            <h2 className="infosapi"><span> Placa do veículo:</span><br />{post.placa}</h2>
-            <h2 className="infosapi"><span> Cliente: </span><br />{post.dono}</h2>
-            <h2 className="infosapi"><span> Contato: </span><br />{post.telefone}</h2>
+            <h2 className="infosapi">
+              <span>🚗 Vaga:</span> {post.id}
+            </h2>
+            <h2 className="infosapi">
+              <span> Marca do veículo:</span>
+              <br />
+              {post.marca}
+            </h2>
+            <h2 className="infosapi">
+              <span> Modelo do veículo:</span>
+              <br />
+              {post.modelo}
+            </h2>
+            <h2 className="infosapi">
+              <span> Cor do veículo:</span>
+              <br />
+              {post.cor}
+            </h2>
+            <h2 className="infosapi">
+              <span> Placa do veículo:</span>
+              <br />
+              {post.placa}
+            </h2>
+            <h2 className="infosapi">
+              <span> Cliente: </span>
+              <br />
+              {post.dono}
+            </h2>
+            <h2 className="infosapi">
+              <span> Contato: </span>
+              <br />
+              {post.telefone}
+            </h2>
             <div className="actions">
               <Link className="btn edit-btn" to={`/posts/edit/${post.id}`}>
                 💾 Editar
