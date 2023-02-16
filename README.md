@@ -102,6 +102,11 @@
 <img src="README/botoes.JPG"><br>
 <i>Acima há dois botões que servem de atalho para visualizar (redireciona para a página de edição e exclusão) e um botão que redreciona para a página onde são adicionados novos itens.</i><br><br>
 
+### Adicionar:
+
+<img src="README/menuadd.JPG"><br>
+<i>Ao clicar no botão de adicionar, uma janela com um formulário é aberta. O usuário deve preencher os dados como indicado. Em caso de sucesso, o campo ficará verde, caso contrário irá tremer e ficar vermelho, indicando que precisa ser digitado ou corrigido.</i><br><br>
+
 ### Editar:
 
 <img src="README/infosedit.JPG"><br>
