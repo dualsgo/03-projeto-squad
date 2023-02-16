@@ -60,9 +60,9 @@ const Andar2 = () => {
                 <img src="https://cdn-icons-png.flaticon.com/512/708/708980.png" className="imgCar" />
               </div>
               <h4 className="infosapi">Veículo cadastrado com sucesso na vaga {andar2.id}</h4>
-              <h4 className="infosapi"><span>Veículo:</span><br />🚗 {andar2.marca} / 🚗 {andar2.modelo}</h4>
-              <h4 className="infosapi"><span>Infos adicionais: </span><br />🎨 {andar2.cor} / 🚗 {andar2.placa}</h4>
-              <h4 className="infosapi"><span> Contato: </span><br />👤 {andar2.dono} / 📱 {andar2.telefone}</h4>
+              <h4 className="infosapi"><span>Veículo:</span><br /> {andar2.marca} /  {andar2.modelo}</h4>
+              <h4 className="infosapi"><span>Infos adicionais: </span><br /> {andar2.cor} /  {andar2.placa}</h4>
+              <h4 className="infosapi"><span> Contato: </span><br /> {andar2.dono} /  {andar2.telefone}</h4>
             </div>
           </div>
         ))

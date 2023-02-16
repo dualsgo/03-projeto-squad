@@ -20,7 +20,7 @@ const Navbar = () => {
           </ul>
         </li>
         <li>
-          <a href="#">⚙️ Painel </a>
+           <a href="#"> Painel </a>
           <ul>
             <li><Link to={`/admin`}>👨‍💻 Gerenciar: Piso 1</Link></li>
             <li><Link to={`/admin2`}>👨‍💻 Gerenciar: Piso 2</Link></li>

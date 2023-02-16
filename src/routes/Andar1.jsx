@@ -71,17 +71,17 @@ const Andar1 = () => {
               <h4 className="infosapi">
                 <span>Veículo:</span>
                 <br />
-                🚗 {andar1.marca} / 🚗 {andar1.modelo}
+                🚗 {andar1.marca} /  {andar1.modelo}
               </h4>
               <h4 className="infosapi">
                 <span>Infos adicionais:</span>
                 <br />
-                🎨 {andar1.cor} / 🚗 {andar1.placa}
+                 {andar1.cor} /  {andar1.placa}
               </h4>
               <h4 className="infosapi">
                 <span>Contato:</span>
                 <br />
-                👤 {andar1.dono} / 📱 {andar1.telefone}
+                 {andar1.dono} /  {andar1.telefone}
               </h4>
             </div>
           </div>
